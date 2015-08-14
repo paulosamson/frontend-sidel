@@ -1,0 +1,40 @@
+
+/*
+@font-face {
+  font-family: 'ArialNarrowBold';
+  src: url('../fonts/arialnarrowbold.eot');
+  src: url('../fonts/arialnarrowbold.eot?#iefix') format('embedded-opentype'),
+	   url('../fonts/arialnarrowbold.woff') format('woff'), 
+	   url('../fonts/arialnarrowbold.ttf')  format('truetype'), 
+	   url('../fonts/arialnarrowbold.svg#svgArialNarrowBold') format('svg');
+}
+
+
+@font-face {
+  font-family: 'ArialNarrow';
+  src: url('../fonts/ArialNarrow.eot'); 
+  src: url('../fonts/ArialNarrow.eot?#iefix') format('embedded-opentype'),
+	   url('../fonts/ArialNarrow.woff') format('woff'), 
+	   url('../fonts/ArialNarrow.ttf')  format('truetype'), 
+	   url('../fonts/ArialNarrow.svg#svgArialNarrow') format('svg'); 
+}*/
+
+
+
+@font-face {
+  font-family: 'DinotBold';
+  src: url('../fonts/dinot-bold.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/dinot-bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+	   url('../fonts/dinot-bold.woff') format('woff'), /* Modern Browsers */
+	   url('../fonts/dinot-bold.ttf')  format('truetype'), /* Safari, Android, iOS */
+	   url('../fonts/dinot-bold.svg#svgDinotBold') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+  font-family: 'DinotLight';
+  src: url('../fonts/dinot-light.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/dinot-light.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+	   url('../fonts/dinot-light.woff') format('woff'), /* Modern Browsers */
+	   url('../fonts/dinot-light.ttf')  format('truetype'), /* Safari, Android, iOS */
+	   url('../fonts/dinot-light.svg#svgDinotLight') format('svg'); /* Legacy iOS */
+}
