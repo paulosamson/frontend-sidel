@@ -1,0 +1,1660 @@
+<!DOCTYPE html>
+
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class='no-js' lang="en">
+<!--<![endif]-->
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!--
+  <script type="text/javascript">
+    window.NREUM || (NREUM = {});
+    NREUM.info = {
+      "beacon": "bam.nr-data.net",
+      "errorBeacon": "bam.nr-data.net",
+      "licenseKey": "6fc69d0325",
+      "applicationID": "6056139",
+      "transactionName": "blEENxYCCkQHBRdQV1cbJzA0TABSAAcWVUwXVRUTHA==",
+      "queueTime": 0,
+      "applicationTime": 217,
+      "ttGuid": "B749D8890E2151F1",
+      "agent": "js-agent.newrelic.com/nr-686.min.js"
+    }
+  </script>
+  <script type="text/javascript">
+    window.NREUM || (NREUM = {}), __nr_require = function(e, n, t) {
+      function r(t) {
+        if (!n[t]) {
+          var o = n[t] = {
+            exports: {}
+          };
+          e[t][0].call(o.exports, function(n) {
+            var o = e[t][1][n];
+            return r(o ? o : n)
+          }, o, o.exports)
+        }
+        return n[t].exports
+      }
+      if ("function" == typeof __nr_require) return __nr_require;
+      for (var o = 0; o < t.length; o++) r(t[o]);
+      return r
+    }({
+      QJf3ax: [function(e, n) {
+        function t(e) {
+          function n(n, t, a) {
+            e && e(n, t, a), a || (a = {});
+            for (var u = c(n), f = u.length, s = i(a, o, r), p = 0; f > p; p++) u[p].apply(s, t);
+            return s
+          }
+
+          function a(e, n) {
+            f[e] = c(e).concat(n)
+          }
+
+          function c(e) {
+            return f[e] || []
+          }
+
+          function u() {
+            return t(n)
+          }
+          var f = {};
+          return {
+            on: a,
+            emit: n,
+            create: u,
+            listeners: c,
+            _events: f
+          }
+        }
+
+        function r() {
+          return {}
+        }
+        var o = "nr@context",
+          i = e("gos");
+        n.exports = t()
+      }, {
+        gos: "7eSDFh"
+      }],
+      ee: [function(e, n) {
+        n.exports = e("QJf3ax")
+      }, {}],
+      3: [function(e, n) {
+        function t(e) {
+          return function() {
+            r(e, [(new Date).getTime()].concat(i(arguments)))
+          }
+        }
+        var r = e("handle"),
+          o = e(1),
+          i = e(2);
+        "undefined" == typeof window.newrelic && (newrelic = window.NREUM);
+        var a = ["setPageViewName", "addPageAction", "setCustomAttribute", "finished", "addToTrace", "inlineHit", "noticeError"];
+        o(a, function(e, n) {
+          window.NREUM[n] = t("api-" + n)
+        }), n.exports = window.NREUM
+      }, {
+        1: 12,
+        2: 13,
+        handle: "D5DuLP"
+      }],
+      gos: [function(e, n) {
+        n.exports = e("7eSDFh")
+      }, {}],
+      "7eSDFh": [function(e, n) {
+        function t(e, n, t) {
+          if (r.call(e, n)) return e[n];
+          var o = t();
+          if (Object.defineProperty && Object.keys) try {
+            return Object.defineProperty(e, n, {
+              value: o,
+              writable: !0,
+              enumerable: !1
+            }), o
+          } catch (i) {}
+          return e[n] = o, o
+        }
+        var r = Object.prototype.hasOwnProperty;
+        n.exports = t
+      }, {}],
+      D5DuLP: [function(e, n) {
+        function t(e, n, t) {
+          return r.listeners(e).length ? r.emit(e, n, t) : void(r.q && (r.q[e] || (r.q[e] = []), r.q[e].push(n)))
+        }
+        var r = e("ee").create();
+        n.exports = t, t.ee = r, r.q = {}
+      }, {
+        ee: "QJf3ax"
+      }],
+      handle: [function(e, n) {
+        n.exports = e("D5DuLP")
+      }, {}],
+      XL7HBI: [function(e, n) {
+        function t(e) {
+          var n = typeof e;
+          return !e || "object" !== n && "function" !== n ? -1 : e === window ? 0 : i(e, o, function() {
+            return r++
+          })
+        }
+        var r = 1,
+          o = "nr@id",
+          i = e("gos");
+        n.exports = t
+      }, {
+        gos: "7eSDFh"
+      }],
+      id: [function(e, n) {
+        n.exports = e("XL7HBI")
+      }, {}],
+      G9z0Bl: [function(e, n) {
+        function t() {
+          var e = d.info = NREUM.info,
+            n = f.getElementsByTagName("script")[0];
+          if (e && e.licenseKey && e.applicationID && n) {
+            c(p, function(n, t) {
+              n in e || (e[n] = t)
+            });
+            var t = "https" === s.split(":")[0] || e.sslForHttp;
+            d.proto = t ? "https://" : "http://", a("mark", ["onload", i()]);
+            var r = f.createElement("script");
+            r.src = d.proto + e.agent, n.parentNode.insertBefore(r, n)
+          }
+        }
+
+        function r() {
+          "complete" === f.readyState && o()
+        }
+
+        function o() {
+          a("mark", ["domContent", i()])
+        }
+
+        function i() {
+          return (new Date).getTime()
+        }
+        var a = e("handle"),
+          c = e(1),
+          u = window,
+          f = u.document;
+        e(2);
+        var s = ("" + location).split("?")[0],
+          p = {
+            beacon: "bam.nr-data.net",
+            errorBeacon: "bam.nr-data.net",
+            agent: "js-agent.newrelic.com/nr-686.min.js"
+          },
+          d = n.exports = {
+            offset: i(),
+            origin: s,
+            features: {}
+          };
+        f.addEventListener ? (f.addEventListener("DOMContentLoaded", o, !1), u.addEventListener("load", t, !1)) : (f.attachEvent("onreadystatechange", r), u.attachEvent("onload", t)), a("mark", ["firstbyte", i()])
+      }, {
+        1: 12,
+        2: 3,
+        handle: "D5DuLP"
+      }],
+      loader: [function(e, n) {
+        n.exports = e("G9z0Bl")
+      }, {}],
+      12: [function(e, n) {
+        function t(e, n) {
+          var t = [],
+            o = "",
+            i = 0;
+          for (o in e) r.call(e, o) && (t[i] = n(o, e[o]), i += 1);
+          return t
+        }
+        var r = Object.prototype.hasOwnProperty;
+        n.exports = t
+      }, {}],
+      13: [function(e, n) {
+        function t(e, n, t) {
+          n || (n = 0), "undefined" == typeof t && (t = e ? e.length : 0);
+          for (var r = -1, o = t - n || 0, i = Array(0 > o ? 0 : o); ++r < o;) i[r] = e[n + r];
+          return i
+        }
+        n.exports = t
+      }, {}]
+    }, {}, ["G9z0Bl"]);
+  </script>
+-->
+  <meta name="viewport" content="width=1200" />
+
+
+
+  <meta name="robots" content="index, follow" />
+  <title>Sidel - A Better Match</title>
+  <meta name="title" content="Sidel - A Better Match" />
+  <meta name="keywords" content="PET, aseptic, liquid packaging" />
+  <meta name="description" content="Sidel is the leading global provider of PET solutions for liquid packaging. " />
+  <meta name="Content-language" content="da-DK" />
+  <meta name="language" content="da-DK" />
+  <meta name="author" content="admin" />
+  <meta name="dcterms.rights" content="Copyright 2012" />
+  <meta name="pubdate" content="2015-08-12T12:07:23" />
+  <meta name="resource-type" content="Document" />
+  <meta name="owner" content="Sidel" />
+  <!--Document settings-->
+
+
+
+  <!-- all styles -->
+  <!-- <link href="/bundles/sidel-all.css?v=na7AI_OTggMW47sFYaarh17UJdEOendSjc3dQjYYVCQ1" rel="stylesheet"/> -->
+
+  <link href="css/fonts.css" rel="stylesheet" />
+  <link href="css/owl-carousel.css" rel="stylesheet" />
+  <link href="css/owl-theme.css" rel="stylesheet" />
+  <link href="css/owl-transitions.css" rel="stylesheet" />
+  <link href="css/normalize.css" rel="stylesheet" />
+  <link href="css/style.css" rel="stylesheet" />
+  <link href="css/coverflow.css" rel="stylesheet" />
+
+
+
+  <!--
+         bundles.Add(new ScriptBundle("~/bundles/sidel-head-all.js").Include(
+                          "~/scripts/modernizr.custom.js",
+                          "~/scripts/jquery-migrate.min.js",
+                          "~/scripts/owl.carousel.min.js",
+                          "~/scripts/alt.carousel.min.js",
+                          "~/scripts/jquery-megamenu.js",
+                          "~/scripts/jquery-checkbox.min.js",
+                          "~/scripts/tooltipsy.min.js",
+                          "~/scripts/jquery.stick.min.js",
+                          "~/scripts/jquery.columnizer.js",
+                          "~/scripts/script.js",
+                          "~/scripts/coverflow.js"
+                          ));
+
+
+                bundles.Add(new ScriptBundle("~/bundles/sidel-foot-all.js").Include(
+                          "~/scripts/jquery.placeholder-enhanced.min.js",
+                          "~/scripts/fancybox.js",
+                          "~/scripts/script-foot.js"
+                          ));
+
+                bundles.Add(new StyleBundle("~/bundles/sidel-all.css").Include(
+                            "~/css/fonts.css", //font
+                            "~/css/owl-carousel.css",
+                            "~/css/owl-theme.css",
+                            "~/css/owl-transitions.css",
+                            "~/css/normalize.css", //css reset
+                            "~/css/style.css",
+                            "~/css/coverflow.css"
+                           ));
+
+
+                bundles.Add(new ScriptBundle("~/bundles/filter.js").Include(
+                            "~/scripts/swfaddress.js",
+                            "~/scripts/eb-cool-filter.js"
+                        ));
+ -->
+
+
+  <link rel="icon" href="sidel-favicon.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="sidel-favicon.ico" type="image/x-icon" />
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+  <!-- <script src="/bundles/sidel-head-all.js?v=uByzwSJ8mPzxIV8J77cCyPpex_8uNDDNvOUZtiWIgag1"></script> -->
+  <script src="scripts/modernizr.custom.js"></script>
+  <script src="scripts/jquery-migrate.min.js"></script>
+  <script src="scripts/owl.carousel.min.js"></script>
+  <script src="scripts/alt.carousel.min.js"></script>
+  <script src="scripts/jquery-megamenu.js"></script>
+  <script src="scripts/tooltipsy.min.js"></script>
+  <script src="scripts/jquery.stick.min.js"></script>
+  <script src="scripts/jquery.columnizer.js"></script>
+  <script src="scripts/script.js"></script>
+  <script src="scripts/coverflow.js"></script>
+
+  <!--[if IE 8]> <script type="text/javascript" src="http://www.sidel.com/scripts/selectivizr-min.js"></script> <![endif]-->
+
+<!--
+  <script>
+    var _prum = [
+      ['id', '5595340eabe53dfa30a218ac'],
+      ['mark', 'firstbyte', (new Date()).getTime()]
+    ];
+    (function() {
+      var s = document.getElementsByTagName('script')[0],
+        p = document.createElement('script');
+      p.async = 'async';
+      p.src = '//rum-static.pingdom.net/prum.min.js';
+      s.parentNode.insertBefore(p, s);
+    })();
+  </script>
+-->
+
+
+</head>
+
+<body id="EN" class="Forside wide-page " data-splash="0" data-splash-lang="">
+
+  <!-- Main Content -->
+
+
+  <main class="container">
+
+    <!-- Header -->
+    <!-- Variables -->
+
+
+    <!-- Initialization -->
+
+
+    <header class="topbar">
+      <div class="masthead page-width">
+
+
+
+        <!-- Variables -->
+
+
+        <!-- Initialization -->
+
+
+        <nav class="topnav">
+          <ul>
+            <!-- Language Dropdown -->
+            <li class="dropdown">
+              <a href="#" id="languageMenuHover">Language/中文版</a>
+              <ul id="languageMenu" data-nodename="EN" data-level="1">
+                <!-- Loaded from ajax -->
+              </ul>
+            </li>
+            <!-- End language dropdown -->
+
+            <li>
+              <a href="http://www.sidel.com/about-sidel/contact">
+                Contact
+	            </a>
+
+            </li>
+            <li>
+              <a href="http://www.sidel.com/about-sidel/media">
+                Media
+	            </a>
+
+            </li>
+
+            <li>
+              <a href="/login/" target=_blank>
+					    Login<span style="margin-left:5px;"><img src="images/icon-lock.png" alt="lock"/></span>
+				    </a>
+            </li>
+
+            <li style="width: 120px;padding: 0 0 0 10px;">
+              <form id="search-form" name="search-form" method="get" action="http://www.sidel.com/search" style="position: relative;">
+                <input class="search-input" type="text" name="search">
+                <input class="search-submit" type="image" alt="søg" src="images/icon-search.png">
+              </form>
+            </li>
+          </ul>
+        </nav>
+
+
+
+        <!-- Helpers -->
+
+
+
+
+        <!-- Variables -->
+
+
+        <!-- Initialization -->
+
+
+        <nav class="menu" id="menu">
+          <ul class="main-menu fouc">
+            <!-- Level 1 -->
+            <li class="pos-1  sub-col-3">
+              <a href="http://www.sidel.com/about-sidel">
+        About Sidel
+	</a>
+
+
+              <div class="sub-wrapper">
+                <div class="sub-menu">
+                  <!-- Level 2 -->
+                  <ul class="sub-nav-group">
+                    <li>
+                      <a href="http://www.sidel.com/about-sidel/media">
+        Media
+	</a>
+
+                      <ul class="sub-menu-level-2">
+                        <!-- Level 3 -->
+                        <li>
+                          <a href="http://www.sidel.com/about-sidelhttp://www.sidel.com/media/press-releases">
+        Press releases
+	</a>
+
+                        </li>
+                        <li>
+                          <a href="http://www.sidel.com/about-sidelhttp://www.sidel.com/media/press-contact">
+        Press contact
+	</a>
+
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <a href="http://www.sidel.com/about-sidel/events">
+        Events
+	</a>
+
+                    </li>
+                    <li>
+                      <a href="http://www.sidel.com/about-sidel/sustainability">
+        Sustainability
+	</a>
+
+                    </li>
+                  </ul>
+                  <ul class="sub-nav-group">
+                    <li>
+                      <a href="http://www.sidel.com/about-sidel/more-about-sidel">
+        More about Sidel
+	</a>
+
+                    </li>
+                    <li>
+                      <a href="http://www.sidel.com/about-sidel/global-references">
+        Global References
+	</a>
+
+                    </li>
+                    <li>
+                      <a href="http://www.sidel.com/about-sidel/careers">
+        Careers
+	</a>
+
+                    </li>
+                  </ul>
+                  <ul class="sub-nav-group">
+                    <li>
+                      <a href="http://www.sidel.com/about-sidel/contact">
+        Contact
+	</a>
+
+                      <ul class="sub-menu-level-2">
+                        <!-- Level 3 -->
+                        <li>
+                          <a href="http://www.sidel.com/about-sidel/contact/north-america">
+        North America
+	</a>
+
+                        </li>
+                        <li>
+                          <a href="http://www.sidel.com/about-sidel/contact/latin-america">
+        Latin America
+	</a>
+
+                        </li>
+                        <li>
+                          <a href="http://www.sidel.com/about-sidel/contact/europe-and-central-asia">
+        Europe & Central Asia
+	</a>
+
+                        </li>
+                        <li>
+                          <a href="http://www.sidel.com/about-sidel/contact/greater-middle-east-and-africa">
+        Greater Middle East & Africa
+	</a>
+
+                        </li>
+                        <li>
+                          <a href="http://www.sidel.com/about-sidel/contact/greater-china">
+        Greater China
+	</a>
+
+                        </li>
+                        <li>
+                          <a href="http://www.sidel.com/about-sidel/contact/south-east-asia-pacific">
+        South East Asia Pacific
+	</a>
+
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <li class="pos-2  sub-col-3">
+              <a href="http://www.sidel.com/services">
+        Services
+	</a>
+
+
+              <div class="sub-wrapper">
+                <div class="sub-menu">
+                  <!-- Level 2 -->
+                  <ul class="sub-nav-group">
+                    <li>
+                      <a href="http://www.sidel.com/services/maintenance">
+        Maintenance
+	</a>
+
+                    </li>
+                    <li>
+                      <a href="http://www.sidel.com/services/line-improvement">
+        Line improvement
+	</a>
+
+                    </li>
+                    <li>
+                      <a href="http://www.sidel.com/services/training">
+        Training
+	</a>
+
+                    </li>
+                  </ul>
+                  <ul class="sub-nav-group">
+                    <li>
+                      <a href="http://www.sidel.com/services/spare-parts-logistics">
+        Spare Parts & Logistics
+	</a>
+
+                    </li>
+                    <li>
+                      <a href="http://www.sidel.com/services/line-conversions-moulds">
+        Line Conversions & Moulds
+	</a>
+
+                    </li>
+                    <li>
+                      <a href="http://www.sidel.com/services/packaging">
+        Packaging
+	</a>
+
+                    </li>
+                  </ul>
+                  <ul class="sub-nav-group">
+                    <li>
+                      <a href="http://www.sidel.com/services/a-little-bit-more">
+        A Little Bit More
+	</a>
+
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <li class="pos-3  sub-col-3">
+              <a href="http://www.sidel.com/equipment">
+        Equipment
+	</a>
+
+
+              <div class="sub-wrapper">
+                <div class="sub-menu">
+                  <!-- Level 2 -->
+                  <ul class="sub-nav-group">
+                    <li>
+                      <a href="http://www.sidel.com/equipment/blowing">
+        Blowing
+	</a>
+
+                    </li>
+                    <li>
+                      <a href="http://www.sidel.com/equipment/dry-preform-decontamination">
+        Dry preform decontamination
+	</a>
+
+                    </li>
+                    <li>
+                      <a href="http://www.sidel.com/equipment/filling">
+        Filling
+	</a>
+
+                    </li>
+                  </ul>
+                  <ul class="sub-nav-group">
+                    <li>
+                      <a href="http://www.sidel.com/equipment/blowing-filling-capping-system">
+        Blowing-filling-capping system
+	</a>
+
+                    </li>
+                    <li>
+                      <a href="http://www.sidel.com/equipment/labelling">
+        Labelling
+	</a>
+
+                    </li>
+                    <li>
+                      <a href="http://www.sidel.com/equipment/end-of-line-solutions">
+        End of line solutions
+	</a>
+
+                    </li>
+                  </ul>
+                  <ul class="sub-nav-group">
+                    <li>
+                      <a href="http://www.sidel.com/equipment/complete-lines">
+        Complete lines
+	</a>
+
+                    </li>
+                    <li>
+                      <a href="http://www.sidel.com/equipment/sidel-matrix">
+        Sidel Matrix
+	</a>
+
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <li class="pos-4  sub-col-2">
+              <a href="http://www.sidel.com/your-liquids">
+        Your beverages
+	</a>
+
+
+              <div class="sub-wrapper">
+                <div class="sub-menu">
+                  <!-- Level 2 -->
+                  <ul class="sub-nav-group">
+                    <li>
+                      <a href="http://www.sidel.com/your-liquids/water">
+        Water
+	</a>
+
+                    </li>
+                    <li>
+                      <a href="http://www.sidel.com/your-liquids/juices,-nectars,-soft-drinks,-isotonics,-teas">
+        Juices, Nectars, Soft Drinks, Isotonics & Teas (JNSDIT)
+	</a>
+
+                    </li>
+                    <li>
+                      <a href="http://www.sidel.com/your-liquids/carbonated-soft-drinks-(csd)">
+        Carbonated Soft Drinks (CSD)
+	</a>
+
+                    </li>
+                  </ul>
+                  <ul class="sub-nav-group">
+                    <li>
+                      <a href="http://www.sidel.com/your-liquids/liquid-dairy-products">
+        Liquid Dairy Products (LDP)
+	</a>
+
+                    </li>
+                    <li>
+                      <a href="http://www.sidel.com/your-liquids/beer">
+        Beer
+	</a>
+
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <li class="pos-5 last sub-col-0">
+              <a href="http://www.sidel.com/why-pet">
+        Why PET
+	</a>
+
+
+            </li>
+          </ul>
+        </nav>
+        <!-- Helpers -->
+
+
+
+
+        <figure class="branding">
+          <a href="/" id="logo">
+            <img src="images/logo.png" alt="Sidel - A better match" class="logo" />
+          </a>
+        </figure>
+      </div>
+      <div id="topbar-dropshadow"></div>
+    </header>
+
+
+
+    <!-- Header -->
+
+    <!-- START BREADCRUMBS -->
+
+
+
+
+
+
+
+
+
+
+    <!-- BREADCRUMBS END -->
+
+    <!-- Start content -->
+
+
+
+
+
+
+
+    <h1 style="display:none;">
+      Sidel - A Better Match
+    </h1>
+
+    <!-- Sliders -->
+    <div class="hero-banner">
+      <div id="slideshow-hero" class="owl-carousel owl-theme " style="background: url('images/bg-banner-gradient.png') top left repeat-x;">
+        <div class="item" style="background:url('images/bg-banner-gradient.png') top left repeat-x;">
+          <div class="item-image lazy" data-src="http://www.sidel.com/media/6004254/top-banner-labelling.png"></div>
+          <img class="" src="images/bg-banner-gradient.png" alt="" />
+          <div class="texts big-link" data-href="http://www.sidel.com/equipment/labelling" data-target="_self">
+            <p class="text-body" style="color:#">Whatever labels you require, our labellers can handle them all. We make sure you benefit from attractive packaging as well as sustainable and cost-efficient production. </p>
+            <a class="text-more" href="http://www.sidel.com/equipment/labelling" target="_self">Read more<span><img src="images/icon-link-hover.png" alt="" /></span></a>
+          </div>
+        </div>
+        <div class="item" style="background:url('http://www.sidel.com/media/3764376/sidel_hero_banner_services_v1_repeater.png') top left repeat-x;">
+          <div class="item-image lazy" data-src="http://www.sidel.com/media/5605537/packaging_banner_top__2_.png"></div>
+          <img class="" src="http://www.sidel.com/media/3764376/sidel_hero_banner_services_v1_repeater.png" alt="" />
+          <div class="texts big-link" data-href="http://www.sidel.com/services/packaging" data-target="_self">
+          </div>
+        </div>
+        <div class="item" style="background:url('http://www.sidel.com/media/3764376/sidel_hero_banner_services_v1_repeater.png') top left repeat-x;">
+          <div class="item-image lazy" data-src="http://www.sidel.com/media/5605527/sidel_services_spare_parts_hero_banner.png"></div>
+          <img class="" src="http://www.sidel.com/media/3764376/sidel_hero_banner_services_v1_repeater.png" alt="" />
+          <div class="texts big-link" data-href="http://www.sidel.com/services/spare-parts-logistics" data-target="_self">
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+
+    <!-- Articles -->
+    <div class="page-content">
+
+      <div class="article-previews">
+        <ul>
+          <li class="article-item  ">
+            <a href="http://www.sidel.com/services/packaging/packaging-and-preform-design">
+              <div class="lazy" data-src="http://sidel.com/umbraco/ImageGen.ashx?image=/media/5606709/packaging-and-preform-design_lp_small.jpg&amp;width=300&amp;compression=80" style="overflow: hidden;height: 140px;background-size:cover;"></div>
+              <h2>Packaging &amp; Preform Design</h2>
+              <p>Turn your creative ideas into an industrial reality
+                <span class="link-icon"></span>
+              </p>
+
+              <img class="hover-effect" src="images/hover-frontpage-news-image.png" alt="" />
+            </a>
+
+          </li>
+          <li class="article-item  ">
+            <a href="http://www.sidel.com/services/line-improvement/every-line-can-be-improved">
+              <div class="lazy" data-src="http://sidel.com/umbraco/ImageGen.ashx?image=/media/4849276/line-improvement-lp-small.jpg&amp;width=300&amp;compression=80" style="overflow: hidden;height: 140px;background-size:cover;"></div>
+              <h2>Every line can be improved</h2>
+              <p>50% less air pressure. 20% less energy. 15% more productivity. 45% savings. What...
+                <span class="link-icon"></span>
+              </p>
+
+              <img class="hover-effect" src="images/hover-frontpage-news-image.png" alt="" />
+            </a>
+
+          </li>
+          <li class="article-item  no-margin">
+            <a href="http://www.sidel.com/services/spare-parts-logistics/original-sidel-spare-parts">
+              <div class="lazy" data-src="http://sidel.com/umbraco/ImageGen.ashx?image=/media/5605133/original-sidel-parts_small.jpg&amp;width=300&amp;compression=80" style="overflow: hidden;height: 140px;background-size:cover;"></div>
+              <h2>Original Sidel spare parts</h2>
+              <p>Assured quality for maximum uptime
+                <span class="link-icon"></span>
+              </p>
+
+              <img class="hover-effect" src="images/hover-frontpage-news-image.png" alt="" />
+            </a>
+
+          </li>
+          <li class="clearfix"></li>
+          <li class="article-item  ">
+            <a href="http://www.sidel.com/about-sidel/global-references/kirin,-japan">
+              <div class="lazy" data-src="http://sidel.com/umbraco/ImageGen.ashx?image=/media/6293004/sidel_kirin_japan_mount_fuji_small.jpg&amp;width=300&amp;compression=80" style="overflow: hidden;height: 140px;background-size:cover;"></div>
+              <h2>Sidel line improvement service helps achieve 18% energy saving</h2>
+              <p>Service results in substantial savings for PET water bottling line at Japan’s...
+                <span class="link-icon"></span>
+              </p>
+
+              <img class="hover-effect" src="images/hover-frontpage-news-image.png" alt="" />
+            </a>
+
+          </li>
+          <li class="article-item has-readmore ">
+            <a href="http://www.sidel.com/about-sidel/events/2015/asia/propak-east-africa-2015">
+              <div class="lazy" data-src="http://sidel.com/umbraco/ImageGen.ashx?image=/media/5470357/pace_asia_2015_logo_small.jpg&amp;width=300&amp;compression=80" style="overflow: hidden;height: 140px;background-size:cover;"></div>
+              <h2>PACE Asia 2015</h2>
+              <p>3 - 5 November - Singapore, Singapore
+
+                <span class="link-icon"></span>
+              </p>
+
+              <img class="hover-effect" src="images/hover-frontpage-news-image.png" alt="" />
+            </a>
+
+            <a class="text-more" href="http://www.sidel.com/about-sidel/events">More events</a>
+          </li>
+          <li class="article-item has-readmore no-margin">
+            <a href="http://www.sidel.com/about-sidelhttp://www.sidel.com/media/press-releases/2015/eco-vadis">
+              <div class="lazy" data-src="http://sidel.com/umbraco/ImageGen.ashx?image=/media/6407947/eco_vadis_small.jpg&amp;width=300&amp;compression=80" style="overflow: hidden;height: 140px;background-size:cover;"></div>
+              <h2>Sidel’s CSR rating places it among top 30% of companies</h2>
+              <p>The commitment that Sidel is making in terms of CSR has been independently evaluated
+                <span class="link-icon"></span>
+              </p>
+
+              <img class="hover-effect" src="images/hover-frontpage-news-image.png" alt="" />
+            </a>
+
+            <a class="text-more" href="http://www.sidel.com/about-sidel/media">More news</a>
+          </li>
+          <li class="clearfix"></li>
+          <li class="ghost-last">
+          </li>
+        </ul>
+      </div>
+
+
+
+      <aside id="widget-side-links">
+        <ul class="site-links">
+          <li>
+            <a href="http://www.sidel.com/about-sidel/contact/newsletter-sign-up" class="newsletter-icon" title="Newsletter sign up">
+              <img src="http://www.sidel.com/media/4845341/email-icon.png" width="28" height="28" alt="http://www.sidel.com/about-sidel/contact/newsletter-sign-up" />
+            </a>
+          </li>
+
+          <li>
+            <a href="http://blog.sidel.com/" target="_blank">
+              <img src="http://www.sidel.com/media/3764476/icon-footer-link-sidel.png" width="28" height="28" title="Go to the Sidel Blog" class="hastip" alt="" />
+            </a>
+          </li>
+          <li>
+            <a href="http://blog.knowledgeshare.com" target="_blank">
+              <img src="http://www.sidel.com/media/3764481/icon-footer-link-yellow-arrow.png" width="28" height="28" title="Visit the KNOWLEDGEshare blog" class="hastip" alt="" />
+            </a>
+          </li>
+        </ul>
+
+        <ul class="social-links">
+          <li>
+            <a href="https://www.facebook.com/SidelInternational" target="_blank">
+              <img src="http://www.sidel.com/media/3764786/icon-footer-social-facebook.png" width="28" height="28" alt="https://www.facebook.com/SidelInternational" />
+            </a>
+          </li>
+          <li>
+            <a href="http://www.linkedin.com/company/sidel" target="_blank">
+              <img src="http://www.sidel.com/media/3764791/icon-footer-social-linkedin.png" width="28" height="28" alt="http://www.linkedin.com/company/sidel" />
+            </a>
+          </li>
+          <li>
+            <a href="https://twitter.com/Sidel_Intl" target="_blank">
+              <img src="http://www.sidel.com/media/3764796/icon-footer-social-twitter.png" width="28" height="28" alt="https://twitter.com/Sidel_Intl" />
+            </a>
+          </li>
+          <li>
+            <a href="http://www.youtube.com/user/sidel" target="_blank">
+              <img src="http://www.sidel.com/media/3764801/icon-footer-social-youtube.png" width="28" height="28" alt="http://www.youtube.com/user/sidel" />
+            </a>
+          </li>
+
+        </ul>
+      </aside>
+    </div>
+
+    <!-- Service Banners -->
+
+
+
+
+
+    <div class="services-banner">
+      <div id="slideshow-services" class="owl-carousel owl-theme">
+        <div class="item" style="background: url(images/bg-temp-frontpage-herobanner_01.jpg) top left repeat-x; height: 488px;">
+          <img class="lazy" data-src="http://sidel.com/umbraco/ImageGen.ashx?compression=80&amp;image=/media/5611178/complete_lines_wo_ppl_1200_488.jpg" alt="">
+          <div class="slide-content">
+            <div class="ie-edge-left"></div>
+            <div class="content">
+              <a href="http://www.sidel.com/equipment/complete-lines">
+                <h2>
+                  <span class="col-orange">COMPLETE SOLUTIONS</span>
+                  <br />
+                  <span class="col-blue">FOR ALL BEVERAGES</span>
+                </h2>
+              </a>
+              <ul class="service-links">
+                <li>
+                  <h3>
+                    <a href="http://www.sidel.com/equipment/blowing">
+                      <span style="background-image:url('http://sidel.com/umbraco/ImageGen.ashx?compression=80&amp;image=/media/5601767/arrow2btn.png')"></span>
+                      <span class="service-name">Blowers</span>
+                    </a>
+                  </h3>
+                </li>
+                <li>
+                  <h3>
+                    <a href="http://www.sidel.com/equipment/labelling">
+                      <span style="background-image:url('http://sidel.com/umbraco/ImageGen.ashx?compression=80&amp;image=/media/5601767/arrow2btn.png')"></span>
+                      <span class="service-name">Labellers</span>
+                    </a>
+                  </h3>
+                </li>
+                <li>
+                  <h3>
+                    <a href="http://www.sidel.com/equipment/filling">
+                      <span style="background-image:url('http://sidel.com/umbraco/ImageGen.ashx?compression=80&amp;image=/media/5601767/arrow2btn.png')"></span>
+                      <span class="service-name">Fillers</span>
+                    </a>
+                  </h3>
+                </li>
+                <li>
+                  <h3>
+                    <a href="http://www.sidel.com/equipment/end-of-line-solutions">
+                      <span style="background-image:url('http://sidel.com/umbraco/ImageGen.ashx?compression=80&amp;image=/media/5601767/arrow2btn.png')"></span>
+                      <span class="service-name">End of Line solutions</span>
+                    </a>
+                  </h3>
+                </li>
+                <li>
+                  <h3>
+                    <a href="http://www.sidel.com/equipment/blowing-filling-capping-system">
+                      <span style="background-image:url('http://sidel.com/umbraco/ImageGen.ashx?compression=80&amp;image=/media/5601767/arrow2btn.png')"></span>
+                      <span class="service-name">Blow-Fill-Cap solutions</span>
+                    </a>
+                  </h3>
+                </li>
+                <li>
+                  <h3>
+                    <a href="http://www.sidel.com/services">
+                      <span style="background-image:url('http://sidel.com/umbraco/ImageGen.ashx?compression=80&amp;image=/media/5601767/arrow2btn.png')"></span>
+                      <span class="service-name">Sidel Services™ </span>
+                    </a>
+                  </h3>
+                </li>
+              </ul>
+
+
+            </div>
+            <div class="ie-edge-right"></div>
+          </div>
+        </div>
+
+        <div class="item" style="background: url(images/bg-temp-frontpage-herobanner_01.jpg) top left repeat-x; height: 488px;">
+          <img class="lazy" data-src="http://sidel.com/umbraco/ImageGen.ashx?compression=80&amp;image=/media/5447810/blowing_banner2-1200px.jpg" alt="Blowers">
+          <div class="slide-content">
+            <div class="ie-edge-left"></div>
+            <div class="content">
+              <a href="http://www.sidel.com/equipment/complete-lines">
+                <h2>
+                  <span class="col-orange">COMPLETE SOLUTIONS</span>
+                  <br />
+                  <span class="col-blue">FOR ALL BEVERAGES</span>
+                </h2>
+              </a>
+              <ul class="service-links">
+                <li>
+                  <h3>
+                    <a href="http://www.sidel.com/equipment/blowing" class=col-blue>
+                      <span style="background-image:url('http://sidel.com/umbraco/ImageGen.ashx?compression=80&amp;image=/media/5601767/arrow2btn.png')"></span>
+                      <span class="service-name">Blowers</span>
+                    </a>
+                  </h3>
+                </li>
+                <li>
+                  <h3>
+                    <a href="http://www.sidel.com/equipment/labelling">
+                      <span style="background-image:url('http://sidel.com/umbraco/ImageGen.ashx?compression=80&amp;image=/media/5601767/arrow2btn.png')"></span>
+                      <span class="service-name">Labellers</span>
+                    </a>
+                  </h3>
+                </li>
+                <li>
+                  <h3>
+                    <a href="http://www.sidel.com/equipment/filling">
+                      <span style="background-image:url('http://sidel.com/umbraco/ImageGen.ashx?compression=80&amp;image=/media/5601767/arrow2btn.png')"></span>
+                      <span class="service-name">Fillers</span>
+                    </a>
+                  </h3>
+                </li>
+                <li>
+                  <h3>
+                    <a href="http://www.sidel.com/equipment/end-of-line-solutions">
+                      <span style="background-image:url('http://sidel.com/umbraco/ImageGen.ashx?compression=80&amp;image=/media/5601767/arrow2btn.png')"></span>
+                      <span class="service-name">End of Line solutions</span>
+                    </a>
+                  </h3>
+                </li>
+                <li>
+                  <h3>
+                    <a href="http://www.sidel.com/equipment/blowing-filling-capping-system">
+                      <span style="background-image:url('http://sidel.com/umbraco/ImageGen.ashx?compression=80&amp;image=/media/5601767/arrow2btn.png')"></span>
+                      <span class="service-name">Blow-Fill-Cap solutions</span>
+                    </a>
+                  </h3>
+                </li>
+                <li>
+                  <h3>
+                    <a href="http://www.sidel.com/services">
+                      <span style="background-image:url('http://sidel.com/umbraco/ImageGen.ashx?compression=80&amp;image=/media/5601767/arrow2btn.png')"></span>
+                      <span class="service-name">Sidel Services™ </span>
+                    </a>
+                  </h3>
+                </li>
+              </ul>
+
+
+            </div>
+            <div class="ie-edge-right"></div>
+          </div>
+        </div>
+        <div class="item" style="background: url(images/bg-temp-frontpage-herobanner_01.jpg) top left repeat-x; height: 488px;">
+          <img class="lazy" data-src="http://sidel.com/umbraco/ImageGen.ashx?compression=80&amp;image=/media/5447815/filling_banner-1200px.jpg" alt="Fillers">
+          <div class="slide-content">
+            <div class="ie-edge-left"></div>
+            <div class="content">
+              <a href="http://www.sidel.com/equipment/complete-lines">
+                <div>
+                  <span class="col-orange">COMPLETE SOLUTIONS</span>
+                  <br />
+                  <span class="col-blue">FOR ALL BEVERAGES</span>
+                </div>
+              </a>
+              <ul class="service-links">
+                <li>
+                  <h3>
+                    <a href="http://www.sidel.com/equipment/blowing">
+                      <span style="background-image:url('http://sidel.com/umbraco/ImageGen.ashx?compression=80&amp;image=/media/5601767/arrow2btn.png')"></span>
+                      <span class="service-name">Blowers</span>
+                    </a>
+                  </h3>
+                </li>
+                <li>
+                  <h3>
+                    <a href="http://www.sidel.com/equipment/labelling">
+                      <span style="background-image:url('http://sidel.com/umbraco/ImageGen.ashx?compression=80&amp;image=/media/5601767/arrow2btn.png')"></span>
+                      <span class="service-name">Labellers</span>
+                    </a>
+                  </h3>
+                </li>
+                <li>
+                  <h3>
+                    <a href="http://www.sidel.com/equipment/filling" class=col-blue>
+                      <span style="background-image:url('http://sidel.com/umbraco/ImageGen.ashx?compression=80&amp;image=/media/5601767/arrow2btn.png')"></span>
+                      <span class="service-name">Fillers</span>
+                    </a>
+                  </h3>
+                </li>
+                <li>
+                  <h3>
+                    <a href="http://www.sidel.com/equipment/end-of-line-solutions">
+                      <span style="background-image:url('http://sidel.com/umbraco/ImageGen.ashx?compression=80&amp;image=/media/5601767/arrow2btn.png')"></span>
+                      <span class="service-name">End of Line solutions</span>
+                    </a>
+                  </h3>
+                </li>
+                <li>
+                  <h3>
+                    <a href="http://www.sidel.com/equipment/blowing-filling-capping-system">
+                      <span style="background-image:url('http://sidel.com/umbraco/ImageGen.ashx?compression=80&amp;image=/media/5601767/arrow2btn.png')"></span>
+                      <span class="service-name">Blow-Fill-Cap solutions</span>
+                    </a>
+                  </h3>
+                </li>
+                <li>
+                  <h3>
+                    <a href="http://www.sidel.com/services">
+                      <span style="background-image:url('http://sidel.com/umbraco/ImageGen.ashx?compression=80&amp;image=/media/5601767/arrow2btn.png')"></span>
+                      <span class="service-name">Sidel Services™ </span>
+                    </a>
+                  </h3>
+                </li>
+              </ul>
+
+
+            </div>
+            <div class="ie-edge-right"></div>
+          </div>
+        </div>
+        <div class="item" style="background: url(images/bg-temp-frontpage-herobanner_01.jpg) top left repeat-x; height: 488px;">
+          <img class="lazy" data-src="http://sidel.com/umbraco/ImageGen.ashx?compression=80&amp;image=/media/5447820/combi_banner-1200px.jpg" alt="Blow-Fill-Cap solutions">
+          <div class="slide-content">
+            <div class="ie-edge-left"></div>
+            <div class="content">
+              <a href="http://www.sidel.com/equipment/complete-lines">
+                <div>
+                  <span class="col-orange">COMPLETE SOLUTIONS</span>
+                  <br />
+                  <span class="col-blue">FOR ALL BEVERAGES</span>
+                </div>
+              </a>
+              <ul class="service-links">
+                <li>
+                  <h3>
+                    <a href="http://www.sidel.com/equipment/blowing">
+                      <span style="background-image:url('http://sidel.com/umbraco/ImageGen.ashx?compression=80&amp;image=/media/5601767/arrow2btn.png')"></span>
+                      <span class="service-name">Blowers</span>
+                    </a>
+                  </h3>
+                </li>
+                <li>
+                  <h3>
+                    <a href="http://www.sidel.com/equipment/labelling">
+                      <span style="background-image:url('http://sidel.com/umbraco/ImageGen.ashx?compression=80&amp;image=/media/5601767/arrow2btn.png')"></span>
+                      <span class="service-name">Labellers</span>
+                    </a>
+                  </h3>
+                </li>
+                <li>
+                  <h3>
+                    <a href="http://www.sidel.com/equipment/filling">
+                      <span style="background-image:url('http://sidel.com/umbraco/ImageGen.ashx?compression=80&amp;image=/media/5601767/arrow2btn.png')"></span>
+                      <span class="service-name">Fillers</span>
+                    </a>
+                  </h3>
+                </li>
+                <li>
+                  <h3>
+                    <a href="http://www.sidel.com/equipment/end-of-line-solutions">
+                      <span style="background-image:url('http://sidel.com/umbraco/ImageGen.ashx?compression=80&amp;image=/media/5601767/arrow2btn.png')"></span>
+                      <span class="service-name">End of Line solutions</span>
+                    </a>
+                  </h3>
+                </li>
+                <li>
+                  <h3>
+                    <a href="http://www.sidel.com/equipment/blowing-filling-capping-system" class=col-blue>
+                      <span style="background-image:url('http://sidel.com/umbraco/ImageGen.ashx?compression=80&amp;image=/media/5601767/arrow2btn.png')"></span>
+                      <span class="service-name">Blow-Fill-Cap solutions</span>
+                    </a>
+                  </h3>
+                </li>
+                <li>
+                  <h3>
+                    <a href="http://www.sidel.com/services">
+                      <span style="background-image:url('http://sidel.com/umbraco/ImageGen.ashx?compression=80&amp;image=/media/5601767/arrow2btn.png')"></span>
+                      <span class="service-name">Sidel Services™ </span>
+                    </a>
+                  </h3>
+                </li>
+              </ul>
+
+
+            </div>
+            <div class="ie-edge-right"></div>
+          </div>
+        </div>
+        <div class="item" style="background: url(images/bg-temp-frontpage-herobanner_01.jpg) top left repeat-x; height: 488px;">
+          <img class="lazy" data-src="http://sidel.com/umbraco/ImageGen.ashx?compression=80&amp;image=/media/5447825/labelling_banner2-1200px.jpg" alt="Labellers">
+          <div class="slide-content">
+            <div class="ie-edge-left"></div>
+            <div class="content">
+              <a href="http://www.sidel.com/equipment/complete-lines">
+                <div>
+                  <span class="col-orange">COMPLETE SOLUTIONS</span>
+                  <br />
+                  <span class="col-blue">FOR ALL BEVERAGES</span>
+                </div>
+              </a>
+              <ul class="service-links">
+                <li>
+                  <h3>
+                    <a href="http://www.sidel.com/equipment/blowing">
+                      <span style="background-image:url('http://sidel.com/umbraco/ImageGen.ashx?compression=80&amp;image=/media/5601767/arrow2btn.png')"></span>
+                      <span class="service-name">Blowers</span>
+                    </a>
+                  </h3>
+                </li>
+                <li>
+                  <h3>
+                    <a href="http://www.sidel.com/equipment/labelling" class=col-blue>
+                      <span style="background-image:url('http://sidel.com/umbraco/ImageGen.ashx?compression=80&amp;image=/media/5601767/arrow2btn.png')"></span>
+                      <span class="service-name">Labellers</span>
+                    </a>
+                  </h3>
+                </li>
+                <li>
+                  <h3>
+                    <a href="http://www.sidel.com/equipment/filling">
+                      <span style="background-image:url('http://sidel.com/umbraco/ImageGen.ashx?compression=80&amp;image=/media/5601767/arrow2btn.png')"></span>
+                      <span class="service-name">Fillers</span>
+                    </a>
+                  </h3>
+                </li>
+                <li>
+                  <h3>
+                    <a href="http://www.sidel.com/equipment/end-of-line-solutions">
+                      <span style="background-image:url('http://sidel.com/umbraco/ImageGen.ashx?compression=80&amp;image=/media/5601767/arrow2btn.png')"></span>
+                      <span class="service-name">End of Line solutions</span>
+                    </a>
+                  </h3>
+                </li>
+                <li>
+                  <h3>
+                    <a href="http://www.sidel.com/equipment/blowing-filling-capping-system">
+                      <span style="background-image:url('http://sidel.com/umbraco/ImageGen.ashx?compression=80&amp;image=/media/5601767/arrow2btn.png')"></span>
+                      <span class="service-name">Blow-Fill-Cap solutions</span>
+                    </a>
+                  </h3>
+                </li>
+                <li>
+                  <h3>
+                    <a href="http://www.sidel.com/services">
+                      <span style="background-image:url('http://sidel.com/umbraco/ImageGen.ashx?compression=80&amp;image=/media/5601767/arrow2btn.png')"></span>
+                      <span class="service-name">Sidel Services™ </span>
+                    </a>
+                  </h3>
+                </li>
+              </ul>
+
+
+            </div>
+            <div class="ie-edge-right"></div>
+          </div>
+        </div>
+        <div class="item" style="background: url(images/bg-temp-frontpage-herobanner_01.jpg) top left repeat-x; height: 488px;">
+          <img class="lazy" data-src="http://sidel.com/umbraco/ImageGen.ashx?compression=80&amp;image=/media/5447830/eol_banner-1200px.jpg" alt="End of Line solutions">
+          <div class="slide-content">
+            <div class="ie-edge-left"></div>
+            <div class="content">
+              <a href="http://www.sidel.com/equipment/complete-lines">
+                <div>
+                  <span class="col-orange">COMPLETE SOLUTIONS</span>
+                  <br />
+                  <span class="col-blue">FOR ALL BEVERAGES</span>
+                </div>
+              </a>
+              <ul class="service-links">
+                <li>
+                  <h3>
+                    <a href="http://www.sidel.com/equipment/blowing">
+                      <span style="background-image:url('http://sidel.com/umbraco/ImageGen.ashx?compression=80&amp;image=/media/5601767/arrow2btn.png')"></span>
+                      <span class="service-name">Blowers</span>
+                    </a>
+                  </h3>
+                </li>
+                <li>
+                  <h3>
+                    <a href="http://www.sidel.com/equipment/labelling">
+                      <span style="background-image:url('http://sidel.com/umbraco/ImageGen.ashx?compression=80&amp;image=/media/5601767/arrow2btn.png')"></span>
+                      <span class="service-name">Labellers</span>
+                    </a>
+                  </h3>
+                </li>
+                <li>
+                  <h3>
+                    <a href="http://www.sidel.com/equipment/filling">
+                      <span style="background-image:url('http://sidel.com/umbraco/ImageGen.ashx?compression=80&amp;image=/media/5601767/arrow2btn.png')"></span>
+                      <span class="service-name">Fillers</span>
+                    </a>
+                  </h3>
+                </li>
+                <li>
+                  <h3>
+                    <a href="http://www.sidel.com/equipment/end-of-line-solutions" class=col-blue>
+                      <span style="background-image:url('http://sidel.com/umbraco/ImageGen.ashx?compression=80&amp;image=/media/5601767/arrow2btn.png')"></span>
+                      <span class="service-name">End of Line solutions</span>
+                    </a>
+                  </h3>
+                </li>
+                <li>
+                  <h3>
+                    <a href="http://www.sidel.com/equipment/blowing-filling-capping-system">
+                      <span style="background-image:url('http://sidel.com/umbraco/ImageGen.ashx?compression=80&amp;image=/media/5601767/arrow2btn.png')"></span>
+                      <span class="service-name">Blow-Fill-Cap solutions</span>
+                    </a>
+                  </h3>
+                </li>
+                <li>
+                  <h3>
+                    <a href="http://www.sidel.com/services">
+                      <span style="background-image:url('http://sidel.com/umbraco/ImageGen.ashx?compression=80&amp;image=/media/5601767/arrow2btn.png')"></span>
+                      <span class="service-name">Sidel Services™ </span>
+                    </a>
+                  </h3>
+                </li>
+              </ul>
+
+
+            </div>
+            <div class="ie-edge-right"></div>
+          </div>
+        </div>
+        <div class="item" style="background: url(images/bg-temp-frontpage-herobanner_01.jpg) top left repeat-x; height: 488px;">
+          <img class="lazy" data-src="http://sidel.com/umbraco/ImageGen.ashx?compression=80&amp;image=/media/5645597/sidel_services_icons_shade.jpg" alt="Sidel Services™ ">
+          <div class="slide-content">
+            <div class="ie-edge-left"></div>
+            <div class="content">
+              <a href="http://www.sidel.com/equipment/complete-lines">
+                <div>
+                  <span class="col-orange">COMPLETE SOLUTIONS</span>
+                  <br />
+                  <span class="col-blue">FOR ALL BEVERAGES</span>
+                </div>
+              </a>
+              <ul class="service-links">
+                <li>
+                  <h3>
+                    <a href="http://www.sidel.com/equipment/blowing">
+                      <span style="background-image:url('http://sidel.com/umbraco/ImageGen.ashx?compression=80&amp;image=/media/5601767/arrow2btn.png')"></span>
+                      <span class="service-name">Blowers</span>
+                    </a>
+                  </h3>
+                </li>
+                <li>
+                  <h3>
+                    <a href="http://www.sidel.com/equipment/labelling">
+                      <span style="background-image:url('http://sidel.com/umbraco/ImageGen.ashx?compression=80&amp;image=/media/5601767/arrow2btn.png')"></span>
+                      <span class="service-name">Labellers</span>
+                    </a>
+                  </h3>
+                </li>
+                <li>
+                  <h3>
+                    <a href="http://www.sidel.com/equipment/filling">
+                      <span style="background-image:url('http://sidel.com/umbraco/ImageGen.ashx?compression=80&amp;image=/media/5601767/arrow2btn.png')"></span>
+                      <span class="service-name">Fillers</span>
+                    </a>
+                  </h3>
+                </li>
+                <li>
+                  <h3>
+                    <a href="http://www.sidel.com/equipment/end-of-line-solutions">
+                      <span style="background-image:url('http://sidel.com/umbraco/ImageGen.ashx?compression=80&amp;image=/media/5601767/arrow2btn.png')"></span>
+                      <span class="service-name">End of Line solutions</span>
+                    </a>
+                  </h3>
+                </li>
+                <li>
+                  <h3>
+                    <a href="http://www.sidel.com/equipment/blowing-filling-capping-system">
+                      <span style="background-image:url('http://sidel.com/umbraco/ImageGen.ashx?compression=80&amp;image=/media/5601767/arrow2btn.png')"></span>
+                      <span class="service-name">Blow-Fill-Cap solutions</span>
+                    </a>
+                  </h3>
+                </li>
+                <li>
+                  <h3>
+                    <a href="http://www.sidel.com/services" class=col-blue>
+                      <span style="background-image:url('http://sidel.com/umbraco/ImageGen.ashx?compression=80&amp;image=/media/5601767/arrow2btn.png')"></span>
+                      <span class="service-name">Sidel Services™ </span>
+                    </a>
+                  </h3>
+                </li>
+              </ul>
+
+
+            </div>
+            <div class="ie-edge-right"></div>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+
+
+
+
+
+    <!-- Blogs -->
+    <div class="blog-feed">
+      <div class="sidel-blog-feed half-width">
+        <a href="http://blog.sidel.com/sustainability/tested-for-success-liquid-and-packaging-perfectly-integrated/" target="_blank">
+          <h2 class="col-blue">
+            <span class="blog-title">SIDEL BLOG</span>
+            <span class="blog-sub-title">Tested for success: Liquid and packaging perfectly integrated</span>
+          </h2>
+          <p>
+            <span class="blog-meta">10/08/2015</span>
+          </p>
+          <p class="blog-excerpt">
+            Find out which factors need to be considered to keep product quality and safety at its highest. The post Tested for success: Liquid and packaging perfectly...
+          </p>
+          <span class="col-orange seemore">See more posts</span>
+        </a>
+
+      </div>
+      <div class="knowledge-blog-feed half-width">
+        <a href="http://blog.knowledgeshare.com/pet/in-the-beverage-industry-its-all-about-the-choice/" target="_blank">
+          <h2 class="col-blue">
+            <span class="blog-title">KNOWLEDGESHARE BLOG</span>
+            <span class="blog-sub-title">In the beverage industry, it’s all about the choice</span>
+          </h2>
+          <p>
+            <span class="blog-meta">07/07/2015</span>
+          </p>
+          <p class="blog-excerpt">
+            Having worked with packaging in the food and beverage industry for the past two...
+          </p>
+          <span class="col-orange seemore">See more posts</span>
+        </a>
+      </div>
+    </div>
+
+
+
+
+    <!-- End content-->
+
+
+    <!-- Start footer -->
+
+
+
+
+
+    <footer class="footer with-nl" id="main-footer">
+      <div class="highlights">
+        <ul class="page-width">
+          <li>
+            <a href="http://www.sidel.com/equipment" class="col-orange">
+              <figure class="highlight-image">
+                <img class="lazy" data-src="http://www.sidel.com/media/3764644/img-footer-highlights-item-1.png" width="197" height="156" alt="Portfolio" />
+              </figure>
+              <span>Portfolio</span>
+            </a>
+          </li>
+          <li>
+            <a href="http://www.sidel.com/about-sidel/global-references" class="col-orange">
+              <figure class="highlight-image">
+                <img class="lazy" data-src="http://www.sidel.com/media/3764649/img-footer-highlights-item-2.png" width="197" height="156" alt="References" />
+              </figure>
+              <span>References</span>
+            </a>
+          </li>
+          <li>
+            <a href="http://www.sidel.com/about-sidelhttp://www.sidel.com/media/inline-magazine" class="col-orange">
+              <figure class="highlight-image">
+                <img class="lazy" data-src="http://www.sidel.com/media/4784344/img-footer-highlights-il7_2.png" width="197" height="156" alt="Magazine" />
+              </figure>
+              <span>Magazine</span>
+            </a>
+          </li>
+          <li>
+            <a href="http://www.sidel.com/about-sidelhttp://www.sidel.com/media/sidel-tv" class="col-orange">
+              <figure class="highlight-image">
+                <img class="lazy" data-src="http://www.sidel.com/media/3764664/img-footer-highlights-item-4.png" width="197" height="156" alt="Videos" />
+              </figure>
+              <span>Videos</span>
+            </a>
+          </li>
+          <li class="ghost-last"></li>
+        </ul>
+      </div>
+      <div class="colophon">
+        <ul class="page-width">
+          <li class="footer-about">
+            <h2>
+              <a href="http://www.sidel.com/about-sidel">
+                                About Sidel
+                            </a>
+
+            </h2>
+            <p>Sidel is the leading global provider of PET solutions for liquid packaging. We are committed to being an innovative, responsive and reliable partner, providing sustainable solutions for the beverage industry.</p>
+          </li>
+
+          <li class="nl-cntr">
+            <div class="nl-box">
+              <div class="nl-header">
+                <h2>
+                  STAY UPDATED WITH OUR LATEST NEWS
+                </h2>
+              </div>
+              <div class="nl-text">
+                <div class="text">
+                  Get our newsletter with the latest industry knowledge directly in your mailbox
+                </div>
+                <div class="mail-icon">
+                  <img src="images/email-icon.png" width="33" height="22" alt="mail" />
+                </div>
+              </div>
+              <div class="nl-orng-txt">
+                <a class="newsletter-signup-now" href="http://www.sidel.com/about-sidel/contact/newsletter-sign-up">SIGN UP NOW<span class="link-icon"></span></a>
+              </div>
+            </div>
+          </li>
+
+          <li class="footer-logo">
+            <a href="/">
+              <img src="images/logo-footer.png" alt="logo" />
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="social">
+        <ul class="page-width">
+          <li class="footer-title" style="padding-left:0px;">Connect with us</li>
+
+          <li>
+            <a href="http://www.sidel.com/about-sidel/contact/newsletter-sign-up" class="newsletter-icon" title="Newsletter sign up">
+              <img src="http://www.sidel.com/media/4845341/email-icon.png" width="28" height="28" alt="newsletter" />
+            </a>
+          </li>
+
+          <li>
+            <a href="http://blog.sidel.com/" target="_blank">
+              <img src="http://www.sidel.com/media/3764476/icon-footer-link-sidel.png" width="28" height="28" title="Go to the Sidel Blog" class="hastip" alt="blog" />
+            </a>
+          </li>
+          <li>
+            <a href="http://blog.knowledgeshare.com" target="_blank">
+              <img src="http://www.sidel.com/media/3764481/icon-footer-link-yellow-arrow.png" width="28" height="28" title="Visit the KNOWLEDGEshare blog" class="hastip" alt="blog" />
+            </a>
+          </li>
+
+          <li>
+            <a href="https://www.facebook.com/SidelInternational" target="_blank">
+              <img src="http://www.sidel.com/media/3764786/icon-footer-social-facebook.png" width="28" height="28" alt="social" />
+            </a>
+          </li>
+          <li>
+            <a href="http://www.linkedin.com/company/sidel" target="_blank">
+              <img src="http://www.sidel.com/media/3764791/icon-footer-social-linkedin.png" width="28" height="28" alt="social" />
+            </a>
+          </li>
+          <li>
+            <a href="https://twitter.com/Sidel_Intl" target="_blank">
+              <img src="http://www.sidel.com/media/3764796/icon-footer-social-twitter.png" width="28" height="28" alt="social" />
+            </a>
+          </li>
+          <li>
+            <a href="http://www.youtube.com/user/sidel" target="_blank">
+              <img src="http://www.sidel.com/media/3764801/icon-footer-social-youtube.png" width="28" height="28" alt="social" />
+            </a>
+          </li>
+
+          <li class="footer-links-horizontal">
+            <ul>
+              <li>
+                <a href="http://www.sidel.com/about-sidel/contact">Contact</a>
+              </li>
+              <li>
+                <a href="http://www.sidel.com/legal-notice">Legal notice</a>
+              </li>
+              <li>
+                <a href="http://www.sidel.com/about-sidel/more-about-sidel/the-tetra-laval-group">The Tetra Laval group</a>
+              </li>
+              <li>
+                <a href="http://www.sidel.com/login">Login</a>
+              </li>
+              <li>
+                <a href="http://www.sidel.com/about-sidel/sitemap">Sitemap</a>
+              </li>
+            </ul>
+
+          </li>
+        </ul>
+
+      </div>
+    </footer>
+
+
+    <!-- End footer -->
+  </main>
+
+
+
+
+  <!-- End Main Content -->
+
+  <!-- JAVASCRIPT -->
+  <!-- <script src="/bundles/sidel-foot-all.js?v=cSiiWmBKhbA3a85YwB1qWvIWDeD3h35R8X9xU1pmR3o1"></script> -->
+
+  <script src="scripts/icheck/icheck.min.js"></script>
+<script src="scripts/jquery-checkbox.min.js"></script>
+
+  <script src="scripts/jquery.placeholder-enhanced.min.js"></script>
+  <script src="scripts/fancybox.js"></script>
+  <script src="scripts/script-foot.js"></script>
+
+
+  <!-- survey -->
+
+
+
+  <!--[if IE 7]>
+            <script type="text/javascript" src="/frontend/js/ie7.js"></script>
+        <![endif]-->
+
+<!--
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-27061325-1']);
+
+    _gaq.push(['_setDomainName', 'sidel.com']);
+
+    _gaq.push(['_setAllowLinker', true]);
+
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script');
+      ga.type = 'text/javascript';
+      ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+-->
+
+
+
+</body>
+
+</html>
