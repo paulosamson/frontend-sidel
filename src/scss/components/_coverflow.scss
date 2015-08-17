@@ -1,29 +1,42 @@
-$coverSlidesH : 350px;
-$coverSlidesHdec : 40px;
-$coverExitH : 50px;
+
+
 
 
 /*=======*/
 $coverWid : 600px;
-$coverHyt : 320px;
+$coverHyt : 337px;
+$coverExitH : 40px;
 $coverHytDiff : 50px;
 $coverRotY : 60deg;
 $coverOffset : 33px;
 $coverDescBoxWid : 200px;
 $coverDescBoxMargin : 20px;
+$thumbsliH : 15px;
+$thumbsliTopMargin : 10px;
+$thumbsliBotMargin : 15px;
 
 #covers-wrapper,.covers-wrapper{
   width : $coverWid;
-  height : 450px;
+  height : $coverHyt + $coverExitH + $thumbsliH + $thumbsliTopMargin + $thumbsliBotMargin ;
   overflow: hidden;
   float : right;
   .btn-close{
     visibility : visible;
     opacity : 1;
-    height : 40px;
-    img{
+    height : $coverExitH;
+    .exit-video{
       display : none;
       float : right;
+      cursor : pointer;
+      @include getsprite($exit);
+    }
+    .title-current-slide{
+      display : none;
+      font-size : 16px;
+      color: #7a8083;
+      text-transform : uppercase;
+      line-height : $coverExitH;
+      font-weight : bold;
     }
   }
   #covers-thumbs{
@@ -33,16 +46,23 @@ $coverDescBoxMargin : 20px;
       display : inline-block;
       margin : 0px;
       padding : 0px;
+      padding-left : 0px;
+      padding-right : 0px;
       li{
         cursor : pointer;
-        margin : 20px 5px 15px 5px;
-        height : 15px;
+        margin : $thumbsliTopMargin 3px $thumbsliBotMargin 3px;
+        height : $thumbsliH;
         width :25px;
         float : right;
         opacity : 0.3;
         background-color : #939393;
+        padding-left: 0em;
+        text-indent: 0em;
         &.active{
           opacity : 0.8;
+        }
+        &:before{
+          display : none;
         }
       }
     }
@@ -123,6 +143,7 @@ $coverDescBoxMargin : 20px;
         }
       }
     }
+
     &.shown.visible-2{
       left: $coverOffset * 1;
       z-index:30;
@@ -175,7 +196,7 @@ $coverDescBoxMargin : 20px;
       -webkit-transform-style:  flat;
     }
     &.old{
-      left:500px;
+      left:$coverWid;
       z-index:50;
       opacity :0;
       height : $coverHyt;
@@ -234,8 +255,26 @@ $coverDescBoxMargin : 20px;
   }
   &.nr1{
     .item{
-      height : 400px;
+      display : block;
+      height : $coverHyt;
       margin-top : 0px;
+      left : 0px;
+      z-index:50;
+      opacity :1;
+      height : $coverHyt;
+      margin-top : 0px;
+      transform: rotateY(0deg);
+      -webkit-transform: rotateY(0deg);
+      -ms-transform: rotateY(0deg);
+      -o-transform: rotateY(0deg);
+
+      transform-style : flat;
+      -webkit-transform-style:  flat;
+
+      .card .cover .front{
+        width : $coverWid;
+      }
+
       &.fillcover{
         margin-left: 0px;
       }
@@ -262,6 +301,7 @@ $coverDescBoxMargin : 20px;
   -ms-transform: rotateY(180deg);
   transform: rotateY(180deg);
   /*box-shadow: 0 0 10px #000;*/
+  zoom : 1;
 
 }
 
@@ -273,6 +313,7 @@ _:-ms-input-placeholder, :root #covers .item .card.hover .flipper, _:-ms-input-p
   -ms-transform: rotateY(0deg);
   transform: rotateY(0deg);
   /*box-shadow: 0 0 10px #000;*/
+  zoom : 1;
 }
 /*-- end accomodating ie --*/
 
@@ -389,20 +430,20 @@ _:-ms-input-placeholder, :root #covers .item .card.hover .flipper, _:-ms-input-p
       }
       &:after{
         content:"";
-        background:url(../images/coverflow/icon-link.png) no-repeat center;
         display : inline-block;
         vertical-align : middle;
         width : 13px;
         height : 10px;
         line-height : 15px;
         margin-left : 10px;
+        @include getsprite($icon-link);
       }
       &:hover{
         span{
           color : #e64b00;
         }
         &:after{
-          background:url(../images/coverflow/icon-link-hover.png) no-repeat center;
+          @include getsprite-position($icon-link-hover);
         }
       }
     }
@@ -413,6 +454,11 @@ _:-ms-input-placeholder, :root #covers .item .card.hover .flipper, _:-ms-input-p
 
       li{
         display : block;
+        padding-left: 0em;
+        text-indent: 0em;
+        &:before{
+          display : none;
+        }
         a{
           text-decoration : none;
           font-size : 0.9em;
@@ -422,12 +468,12 @@ _:-ms-input-placeholder, :root #covers .item .card.hover .flipper, _:-ms-input-p
           }
           &:before{
              content:"";
-             background:url(../images/coverflow/img-sidebar-widget-list-bullet-arrow.png) no-repeat center;
              display : inline-block;
              vertical-align : middle;
              width : 14px;
              height : 12px;
              margin-right : 10px;
+             @include getsprite($img-sidebar-widget-list-bullet-arrow);
            }
            &:hover{
              span{
@@ -453,10 +499,13 @@ _:-ms-input-placeholder, :root #covers .item .card.hover .flipper, _:-ms-input-p
   right : 0px;
   width : $playW;
   text-align : center;
-  img{
+
+  opacity : 1;
+
+  >.img{
     display: inline-block;
-    width : 112px;
-    height : 112px;
+    cursor : pointer;
+    @include getsprite($btn-video-play);
   }
 
 }
@@ -467,10 +516,53 @@ _:-ms-input-placeholder, :root #covers .item .card.hover .flipper, _:-ms-input-p
   -webkit-transform: rotateY(180deg);
   -ms-transform: rotateY(180deg);
   -o-transform: rotateY(180deg);
-  background-color : transparent;
   position: absolute;
   top: 0;
   left: 0;
+  background-color : black;
+}
+
+/*== IE9 fix ==*/
+.no-csstransforms3d{
+
+  #covers .item{
+    &.shown.visible-1{
+      .descbox{
+        left : -1000px;
+      }
+    }
+    &.shown.visible-2{
+      .descbox{
+        left : 0px;
+      }
+    }
+    &.shown.visible-3{
+      .descbox{
+        left : 0px;
+      }
+    }
+    .back{
+      background-color: transparent;
+      position : absolute;
+      top : 0px;
+      left : 0px;
+    }
+    .front{
+      background-color: transparent;
+      position : relative;
+      z-index :0;
+      .image-play{
+        height : 100%;
+        top : 0px;
+        margin-top : 0px;
+        right : 0px;
+        img{
+          width : 100%;
+          height : 100%;
+        }
+      }
+    }
+  }
 }
 
 

@@ -19,6 +19,8 @@ var gulp = require('gulp'),
   imagemin = require('gulp-imagemin'),
   iconfont = require('gulp-iconfont'),
   iconfontcss = require('gulp-iconfont-css'),
+  spritesmith = require('gulp.spritesmith'),
+  merge = require('merge-stream'),
   del = require('del'),
   es = require('event-stream');
 
@@ -178,6 +180,23 @@ gulp.task('iconfont', function(){
 
 gulp.task('makeicons', function(callback) {
   runSequence('iconfont', 'sass', 'html');
+});
+
+gulp.task('sprite', function () {
+  var spriteData = gulp.src('./src/images/sprite/*.png').pipe(spritesmith({
+    imgName: 'sprite.png',
+    cssName: '_sprite.scss'
+  }));
+
+  // Pipe image stream through image optimizer and onto disk
+  var imgStream = spriteData.img
+    .pipe(gulp.dest('./src/images/sprite/'));
+
+  // Pipe CSS stream through CSS optimizer and onto disk
+  var cssStream = spriteData.css
+    .pipe(gulp.dest('./src/scss/utils/'));
+
+  return merge(imgStream, cssStream);
 });
 
 gulp.task('img-optim', function () {

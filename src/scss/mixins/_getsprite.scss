@@ -1,0 +1,26 @@
+//requires
+@mixin getsprite-width($sprite) {
+  width: nth($sprite, 5);
+}
+
+@mixin getsprite-height($sprite) {
+  height: nth($sprite, 6);
+}
+
+@mixin getsprite-position($sprite) {
+  $sprite-offset-x: nth($sprite, 3);
+  $sprite-offset-y: nth($sprite, 4);
+  background-position: $sprite-offset-x  $sprite-offset-y;
+}
+
+@mixin getsprite-image($sprite) {
+  $sprite-image: nth($sprite, 9);
+  background-image: url(../images/sprite/#{$sprite-image});
+}
+
+@mixin getsprite($sprite) {
+  @include getsprite-image($sprite);
+  @include getsprite-position($sprite);
+  @include getsprite-width($sprite);
+  @include getsprite-height($sprite);
+}

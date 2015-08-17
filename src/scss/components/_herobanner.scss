@@ -154,12 +154,12 @@
 
 .hero-banner > .owl-theme .owl-controls .owl-buttons .owl-prev{
 	left: 0px;
-	background:url(../images/img-slideshow-prev.png) top left no-repeat;
+	@include getsprite($img-slideshow-prev);
 }
 
 .hero-banner > .owl-theme .owl-controls .owl-buttons .owl-next{
 	right: 0px;
-	background:url(../images/img-slideshow-next.png) top left no-repeat;
+	@include getsprite($img-slideshow-next);
 }
 
 .hero-banner > .owl-theme .owl-controls .owl-pagination .owl-page span {

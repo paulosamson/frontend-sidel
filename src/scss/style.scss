@@ -4,11 +4,13 @@
   'utils/megamenu',
   'utils/owlcarousel',
   'utils/owltheme',
-  'utils/owltransitions';
+  'utils/owltransitions',
+  'utils/sprite';
 
+@import
+  'mixins/getsprite';
 
 @import
   'components/base',
   'components/coverflow',
   'components/herobanner';
-  
