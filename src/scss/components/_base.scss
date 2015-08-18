@@ -2043,22 +2043,6 @@ margin-top: -25px;
 }
 
 
-.sidel-widget-contact h3
-{
-    background:transparent url('/frontend/images/icon-sprite.png') 265px -187px no-repeat;
-}
-
-.widget-title a
-{
-    color: #4b463f !important;
-}
-
-.sidebar-widget-contact .widget-title a
-{
-    color:#fff !important;
-    font-weight:bold !important;
-}
-
 /*---- MODERNIZR FALLBACKS -----*/
 
 .no-csstransitions{
@@ -2142,47 +2126,56 @@ ul.open
 }
 
 #sitemap {
-    border-top: 3px solid #E1E1E1;
-    padding: 12px 0 0 0;
-}
-#sitemap li {
+  border-top: 3px solid #E1E1E1;
+  padding: 12px 0 0 0;
+	li {
     list-style: none;
     margin: 0;
     padding: 3px 0 3px 12px;
-}
-#sitemap li a {
-    font-family: Arial, Verdana, sans-serif;
-    text-decoration: none;
-    color: #71777A;
-}
-#CN #sitemap li a {
-    font-family: Arial, Verdana, sans-serif;
-}
-#sitemap li a:hover, #sitemap li a:focus {
-    color: #e64b00;
-}
-#sitemap .has-children {
-    background: url(/frontend/images/icon-selected-arrow.png) no-repeat right 6px;
+		a {
+	    font-family: Arial, Verdana, sans-serif;
+	    text-decoration: none;
+	    color: #71777A;
+			&:hover, &:focus{
+				color: #e64b00;
+			}
+		}
+	}
+	.has-children {
+    /*background: url(/frontend/images/icon-selected-arrow.png) no-repeat right 6px;*/
     width: 100%;
     display: block;
-}
-#sitemap .level2 {
+		position:relative;
+		&:after{
+			content:"";
+			display:inline-block;
+			position:absolute;
+			right:10px;
+			top:10px;
+			@include getsprite($icon-selected-arrow);
+		}
+	}
+	.level2 {
     margin: 0 0 12px 0;
     padding: 0 0 9px 0;
     border-bottom: 3px solid #E1E1E1;
     text-transform: uppercase;
-}
-#sitemap .level3 {
+	}
+	.level3 {
     border-bottom: 1px solid #E1E1E1;
     padding-left: 12px;
-}
-
-#sitemap ul
-{
+	}
+	ul{
     padding-left:0px;
     margin:0px;
-
+	}
 }
+
+
+#CN #sitemap li a {
+    font-family: Arial, Verdana, sans-serif;
+}
+
 .no-border {
 border: none!important;
 }
@@ -3158,29 +3151,110 @@ img[data-disable-lightbox="1"] {
   cursor: auto !important;
 }
 
+/*---- < TOGGLECONTENT >---*/
 .toggle-content{
 	margin:0;
 	padding:0;
 	list-style:none;
 	text-indent:0;
-}
-
-.toggle-content .per-content{
-	display:block;
-	margin:0;
-	padding:0;
-	text-indent:0;
-}
-
-.toggle-content .per-content:before{
-	display:none;
-}
-
-.toggle-content .per-all:before{
-    display: none;
-}
-
-.toggle-content .per-all {
+	.per-content{
+		display:block;
+		margin:0;
+		padding:0;
+		text-indent:0;
+		&:before{
+			display:none;
+		}
+		.trigger{
+			display:block;
+			/*background:#F5F5F5 url(../images/harmonica-down.jpg) no-repeat scroll 96% center;*/
+			color:#555555;
+			padding: 10px 20px;
+			cursor:pointer;
+			margin-bottom: 10px;
+		    margin-top: 10px;
+			font-size:18px;
+			font-family:Arial, Helvetica, sans-serif;
+			font-weight:normal;
+			position:relative;
+			background-color:#f5f5f5;
+			&:after{
+				content:"";
+				position: absolute;
+				right:30px;
+				top:15px;
+				vertical-align:middle;
+				@include getsprite($harmonica-down);
+			}
+			.headline{
+			    font-weight:bold;
+				color:#555555;
+			}
+			.subheadline{
+				color:#e64b00;
+			}
+		}
+		.content{
+			display:none;
+			overflow:hidden;
+		}
+		.speaker {
+	    clear: left;
+	    float: left;
+	    margin: 0 0 19px;
+	    width: 100%;
+			overflow:hidden;
+			font-family:Arial, Helvetica, sans-serif;
+		}
+		.speaker-image {
+	    float: left;
+	    height: 130px;
+	    width: 145px;
+		}
+		.speaker-details {
+	    float: left;
+	    min-height: 130px;
+	    position: relative;
+	    width: 380px;
+			h5 {
+		    font-size: 16px;
+		    margin: 0 0 1em;
+				font-weight:normal;
+			}
+			.speaker-department, .speaker-title{
+		    color: #8e8f90;
+		    font-size: 14px;
+		    margin: 0;
+			}
+			.spearker-readmore {
+		    bottom: 6px;
+		    left: -111px;
+		    margin: 0;
+		    position: absolute;
+			}
+		}
+		.speaker-logo {
+	    bottom: 0;
+	    left: 0;
+	    margin: 0;
+	    position: absolute;
+		}
+		&.open{
+			.trigger{
+				/*background-image:url(../images/harmonica-up.jpg);*/
+				&:after{
+					content:"";
+					display:inline-block;
+					text-align:right;
+					@include getsprite($harmonica-up);
+				}
+			}
+			.content{
+				display:block;
+			}
+		}
+	}
+	.per-all {
     display: block;
     text-align: right;
     padding-right: 15px;
@@ -3193,215 +3267,112 @@ img[data-disable-lightbox="1"] {
     cursor:pointer;
     text-indent: 0px;
     position: relative;
+		&:before{
+			display:none;
+		}
+		.openall{
+		    margin: 0px;
+		}
+	}
 }
+/*---- </ TOGGLECONTENT >---*/
 
-.toggle-content .per-all .openall{
-    margin: 0px;
-}
 
-.per-content .trigger{
-	display:block;
-	/*background:#F5F5F5 url(../images/harmonica-down.jpg) no-repeat scroll 96% center;*/
-	color:#555555;
-	padding: 10px 20px;
-	cursor:pointer;
-	margin-bottom: 10px;
-    margin-top: 10px;
-	font-size:18px;
-	font-family:Arial, Helvetica, sans-serif;
-	font-weight:normal;
-	@include getsprite-image($harmonica-down);
-	@include getsprite-position($harmonica-down);
-}
-
-.per-content .trigger .headline{
-    font-weight:bold;
-	color:#555555;
-}
-
-.per-content .trigger .subheadline{
-	color:#e64b00;
-}
-
-.per-content.open .trigger{
-	/*background-image:url(../images/harmonica-up.jpg);*/
-	@include getsprite-image($harmonica-up);
-	@include getsprite-position($harmonica-up);
-}
-
-.per-content.open .content{
-	display:block;
-}
-
-.per-content .content{
-	display:none;
-	overflow:hidden;
-}
-
-.per-content .speaker {
-    clear: left;
-    float: left;
-    margin: 0 0 19px;
-    width: 100%;
-	overflow:hidden;
-	font-family:Arial, Helvetica, sans-serif;
-}
-
-.per-content .speaker-image {
-    float: left;
-    height: 130px;
-    width: 145px;
-}
-
-.per-content .speaker-details {
-    float: left;
-    min-height: 130px;
-    position: relative;
-    width: 380px;
-}
-
-.per-content .speaker-details h5 {
-    font-size: 16px;
-    margin: 0 0 1em;
-	font-weight:normal;
-}
-
-.per-content .speaker-details .speaker-title,
-.per-content .speaker-details .speaker-department {
-    color: #8e8f90;
-    font-size: 14px;
-    margin: 0;
-}
-
-.per-content .speaker-logo {
-    bottom: 0;
-    left: 0;
-    margin: 0;
-    position: absolute;
-}
-
-.per-content .speaker-details .spearker-readmore {
-    bottom: 6px;
-    left: -111px;
-    margin: 0;
-    position: absolute;
-}
-
+/*---- < SPEAKERBOX >---*/
 
 .speakerbox {
-    font-family: Arial,Helvetica,sans-serif;
-    margin: 50px auto;
-    width: 950px;
-    text-align:left;
-}
-
-.speakerbox .speaker-highlight {
+  font-family: Arial,Helvetica,sans-serif;
+  margin: 50px auto;
+  width: 950px;
+  text-align:left;
+	.speaker-highlight {
     margin-bottom: 16px;
     position: relative;
-}
-.speakerbox .highlite{
+		> img {
+		    float: left;
+		}
+	}
+	.highlite{
     border-bottom: 1px dotted #c3c5c7;
     border-top: 1px dotted #c3c5c7;
     padding: 15px 0;
-	overflow:hidden;
-}
-
-.speakerbox .speaker-highlight > img {
-    float: left;
-}
-
-.speakerbox .speaker-info {
+		overflow:hidden;
+	}
+	.speaker-info {
     float: left;
     margin: 10px 0 40px 25px;
     position: relative;
-}
-.speakerbox .speaker-info .headline {
-    display: block;
-    font-size: 22px;
-    font-weight: bold;
-    margin: 0 0 14px;
-}
-
-.speakerbox .speaker-info .title {
-    margin: 0 0 5px;
-}
-.speakerbox .speaker-info .company,
-.speakerbox .speaker-info .title {
-    display: block;
-    font-size: 19px;
-}
-
-.speakerbox .speaker-info .company,
-.speakerbox .speaker-info .title {
-    display: block;
-    font-size: 19px;
-}
-
-.speakerbox .speaker-info > img {
-    margin: 18px 0 0;
-}
-
-.speakerbox .speaker-nav-wrap {
-    bottom: 13px;
-    left: 210px;
-    position: absolute;
-}
-
-.speakerbox .speaker-info-nav {
+		.headline {
+	    display: block;
+	    font-size: 22px;
+	    font-weight: bold;
+	    margin: 0 0 14px;
+		}
+		.title {
+		  margin: 0 0 5px;
+		}
+		.title, .company {
+	    display: block;
+	    font-size: 19px;
+		}
+		>img {
+		  margin: 18px 0 0;
+		}
+	}
+	.speaker-info-nav {
     border: 1px solid #efefef;
     float: left;
     height: 29px;
     text-decoration: none;
-}
-
-.speakerbox .speaker-info-nav .text {
-    color: #bbbbbb !important;
-    display: block;
-    float: left;
-    font-weight: bold;
-    margin: 6px 17px 0 15px;
-}
-
-.speakerbox .speaker-info-nav .next {
-    background: url("../images/eventsites/speaker-nav-next.png") no-repeat scroll 17px 8px #efefef;
-}
-.speakerbox .speaker-info-nav .next,
-.speakerbox .speaker-info-nav .prev {
-    float: left;
-    height: 30px;
-    width: 41px;
-}
-
-.speakerbox .nav-margin {
-    margin: 0 15px 0 0;
-}
-
-.speakerbox .speaker-info-nav .prev {
-    background: url("../frontend/images/eventsites/speaker-nav-prev.png") no-repeat scroll 15px 8px #efefef;
-}
-
-.speakerbox .speaker-sessions {
+		.text {
+	    color: #bbbbbb !important;
+	    display: block;
+	    float: left;
+	    font-weight: bold;
+	    margin: 6px 17px 0 15px;
+		}
+		.next {
+		  background: url("../images/eventsites/speaker-nav-next.png") no-repeat scroll 17px 8px #efefef;
+		}
+		.prev {
+		  background: url("../frontend/images/eventsites/speaker-nav-prev.png") no-repeat scroll 15px 8px #efefef;
+		}
+		.prev, .next {
+	    float: left;
+	    height: 30px;
+	    width: 41px;
+		}
+	}
+	.speaker-nav-wrap {
+    bottom: 13px;
+    left: 210px;
+    position: absolute;
+	}
+	.nav-margin {
+	  margin: 0 15px 0 0;
+	}
+	.speaker-sessions {
     border-bottom: 1px dotted #c3c5c7;
     margin: 0 0 14px;
     padding: 0 0 11px;
-	clear:both;
-}
-
-.speakerbox .speaker-session {
+		clear:both;
+	}
+	.speaker-session {
     font-size: 16px;
     margin: 0 0 4px;
+		span {
+	    color: #e23221;
+	    font-weight: bold;
+		}
+	}
+	.speaker-teaser{
+	    line-height: 22px;
+	    font-size: 16px;
+	    font-weight: bold;
+	}
 }
+/*---- </ SPEAKERBOX >---*/
 
-.speakerbox .speaker-session span {
-    color: #e23221;
-    font-weight: bold;
-}
-
-.speakerbox .speaker-teaser{
-    line-height: 22px;
-    font-size: 16px;
-    font-weight: bold;
-}
 
 
 #btn-share-mail,#btn-share-print{
