@@ -1,0 +1,25 @@
+.page-content #widget-side-links{
+	position:absolute;
+	right:0px;
+	top:40px;
+}
+
+#widget-side-links ul.site-links,#widget-side-links ul.social-links{
+	width:28px;
+	padding:20px;
+
+}
+
+#widget-side-links ul.site-links{
+	border-bottom:1px #d6d6d6 solid;
+	background-color:#ececec;
+}
+
+#widget-side-links ul.social-links{
+	border-top:1px #fff solid;
+	background-color:#f5f5f5;
+}
+
+#widget-side-links ul li{
+	margin-bottom:10px;
+}
