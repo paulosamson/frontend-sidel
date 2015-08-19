@@ -1,0 +1,622 @@
+
+.calc{
+  a{
+    &.back-link {
+      text-align: center;
+      font-weight: bold;
+      background-color: #e64b00!important;
+      &:before {
+        content: "";
+        vertical-align: top;
+        /*background: url("../images/icon-calc-back-link.png") no-repeat center center;*/
+        width: 18px;
+        display: inline-block;
+        margin-right: 3px;
+      	@include getsprite($icon-calc-back-link);
+      	height: 18px;
+      }
+    }
+  }
+  span{
+    &.subtext {
+      font-size: 14px;
+      font-weight: normal;
+      text-transform: none;
+    }
+  }
+
+  /*-- calc left --*/
+  .calc-left {
+    background: url("../images/bg-calc-left.png") repeat-x left bottom;
+    width: 640px;
+    float: left;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+    .calc-container {
+      padding: 30px 0;
+      height: auto;
+      box-sizing: border-box;
+      float: left;
+      h2 {
+        /*background: url("../images/img-calc-email.png") top right no-repeat;*/
+      	@include getsprite($img-calc-email);
+      }
+      h2 {
+        border-bottom: 1px dotted #ccc;
+        margin: 0 30px;
+        padding-bottom: 30px;
+        font-size: 24px;
+        text-transform: uppercase;
+        span {
+          width: 100%;
+          display: block;
+          font-size: 15px;
+          font-weight: normal;
+          margin-top: 5px;
+          text-transform: none;
+        }
+      }
+      form {
+        padding-top: 20px;
+        float: left;
+        &#pack-calc {
+          padding-top: 20px;
+          float: left;
+        }
+        .line {
+          min-height: 55px;
+          width: 100%;
+          float: left;
+          display: table;
+          padding: 10px 30px;
+          box-sizing: border-box;
+          .field-name {
+            vertical-align: middle;
+            width: 230px;
+            display: table-cell;
+            text-transform: uppercase;
+            font-size: 14px;
+            font-weight: bold;
+            padding-right: 70px;
+            line-height: 120%;
+            max-width: 230px;
+          }
+          .input {
+            display: table-cell;
+            vertical-align: middle;
+            input[type="text"], input[type="email"] {
+              outline: none;
+              width: 100%;
+              height: 33px;
+              border: 1px solid #dedede;
+              padding: 0 15px;
+              box-sizing: border-box;
+              cursor: pointer;
+            }
+            input[type="text"] {
+              cursor: text;
+            }
+            .iradio_flat-orange {
+              float: left;
+              cursor: pointer;
+              margin-right: 5px;
+            }
+            label {
+              cursor: pointer;
+              float: left;
+              margin-right: 10px;
+              &.error {
+                cursor: pointer;
+                float: left;
+                margin-right: 10px;
+                font-style: italic;
+                font-size: 10px;
+                color: red;
+                line-height: 13px;
+              }
+            }
+            input{
+              &#pack-calc-submit {
+                background-color: #e64b00;
+                width: 100%;
+                font-size: 20px;
+                font-weight: bold;
+                text-align: center;
+                color: #fff;
+                padding: 10px 0;
+                height: 50px;
+                margin-top: 30px;
+                border: none;
+              }
+              &.short {
+                width: 135px;
+                height: 35px;
+                margin: 0;
+                vertical-align: top;
+              }
+            }
+          }
+        }
+        .zebra:nth-child(even) {
+          background-color: rgba(200,200,200,0.2);
+        }
+        .submit-button {
+          width: 640px;
+          position: relative;
+        }
+      }
+      .calc-results {
+        padding-top: 20px;
+        h3 {
+          padding: 0 30px;
+          font-size: 18px;
+        }
+        .line {
+          border-bottom: 1px dotted #ccc;
+          padding: 10px 0;
+          float: left;
+          width: 100%;
+          &:last-child {
+            border-bottom: 0 dotted #ccc;
+          }
+          .left {
+            width: 60%;
+            float: left;
+            max-width: 60%;
+          }
+          .right {
+            width: 40%;
+            float: right;
+            max-width: 40%;
+            font-weight: normal;
+          }
+        }
+        .head {
+          padding-top: 15px;
+          p {
+            font-size: 15px;
+            font-weight: bold;
+          }
+        }
+        .calc-material-savings {
+          background: #f4f4f5;
+          padding: 10px 30px;
+          float: left;
+          box-sizing: border-box;
+          width: 100%;
+        }
+        .calc-cost-savings {
+          background: #f0f0f1;
+          padding: 10px 30px;
+          float: left;
+          box-sizing: border-box;
+          width: 100%;
+        }
+        .calc-totals {
+          background: #eaeaec;
+          padding: 10px 30px;
+          float: left;
+          box-sizing: border-box;
+          width: 100%;
+          .line{
+            &:last-child {
+              width: 100%;
+              float: left;
+              border-bottom: 0 dotted #ccc;
+            }
+          }
+          .head {
+            p {
+              font-size: 28px;
+              font-weight: bold;
+              color: #E74904!important;
+              text-transform: uppercase;
+              line-height: 50px;
+              &.right {
+                display: block;
+                background-color: #f4f5f5;
+                color: #e64b00;
+                font-size: 28px;
+                height: 50px;
+                line-height: 50px;
+                box-sizing: border-box;
+                font-weight: bold;
+                padding: 0 15px;
+                -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=2, Direction=135, Color=#000000)";
+                /*IE 8*/
+                -moz-box-shadow: 1px 1px 2px 1px rgba(0,0,0,0.2) inset;
+                /*FF 3.5+*/
+                -webkit-box-shadow: 1px 1px 2px 1px rgba(0,0,0,0.2) inset;
+                /*Saf3-4, Chrome, iOS 4.0.2-4.2, Android 2.3+*/
+                box-shadow: 1px 1px 2px 1px rgba(0,0,0,0.2) inset;
+                /* FF3.5+, Opera 9+, Saf1+, Chrome, IE10 */
+                filter:progid:DXImageTransform.Microsoft.Shadow(Strength=2, Direction=135, Color=#000000);
+                /*IE 5.5-7*/
+                i {
+                  font-style: normal;
+                  span {
+                    font-weight: normal;
+                    font-size: 11.99px;
+                    line-height: 110%;
+                    display: inline-block;
+                    text-transform: none;
+                    margin-left: 10px;
+                    vertical-align: middle;
+                  }
+                  .amount {
+                    font-weight: bold;
+                  }
+                }
+              }
+            }
+          }
+        }
+        .calc-disclaimer {
+          position: relative;
+          width: 640px;
+          text-align: center;
+          margin: 20px 0;
+          float: left;
+          p {
+            font-size: 10px;
+            padding: 0 100px;
+            line-height: 120%;
+          }
+        }
+      }
+    }
+  }
+
+  /*-- calc right --*/
+  .calc-right {
+    width: 310px;
+    margin: 0;
+    /*background: url("../images/img-calc-right-bottom.png") no-repeat bottom center;*/
+    background-color: #8c8d8f;
+    padding-bottom: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    &:after{
+      content:"";
+      display:block;
+      position:absolute;
+      bottom:0px;
+      right:0px;
+      @include getsprite($img-calc-right-bottom);
+    }
+    h3 {
+      color: #fff;
+      background-color: #868789;
+      padding: 30px;
+      font-size: 19px;
+      font-weight: normal;
+      line-height: 140%;
+      letter-spacing: 0;
+      margin: 0;
+    }
+    p{
+      &.helper-note {
+        padding-left: 25px;
+        /*background: url("../images/icon-info.png") no-repeat left top;*/
+        color: #ddd!important;
+        margin: 30px;
+        font-size: 15px;
+      	position:relative;
+      	&:before{
+      		content:"";
+      		display:inline-block;
+      		@include getsprite($icon-info);
+      		position:absolute;
+      		left:0px;
+      		top:3px;
+      	}
+      }
+    }
+  }
+
+  input{
+    &::-webkit-input-placeholder {
+      color: #ddd;
+    }
+    &::-moz-placeholder {
+      color: #ddd;
+    }
+    &:-ms-input-placeholder {
+      color: #ddd;
+    }
+    &:-moz-placeholder {
+      color: #ddd;
+    }
+  }
+
+  #data-tip {
+    background-color: #fff;
+    position: absolute;
+    display: none;
+    padding: 10px;
+    font-size: 12px;
+    border: 1px solid #ddd;
+    width: 213px;
+    z-index: 99999;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=1, Direction=135, Color=#000000)";
+    /*IE 8*/
+    -moz-box-shadow: 2px 2px 1px rgba(0,0,0,0.2);
+    /*FF 3.5+*/
+    -webkit-box-shadow: 2px 2px 1px rgba(0,0,0,0.2);
+    /*Saf3-4, Chrome, iOS 4.0.2-4.2, Android 2.3+*/
+    box-shadow: 2px 2px 1px rgba(0,0,0,0.2);
+    /* FF3.5+, Opera 9+, Saf1+, Chrome, IE10 */
+    filter:progid:DXImageTransform.Microsoft.Shadow(Strength=1, Direction=135, Color=#000000);
+    /*IE 5.5-7*/
+    &:before {
+      content: attr(data-content);
+      display: block;
+      width: 100%;
+      font-weight: bold;
+    }
+  }
+  .learn-more {
+    width: 310px;
+    margin: 0;
+    background-color: #8c8d8f;
+    &:after{
+      display: none;
+    }
+    h3 {
+      font-weight: bold;
+      background-color: transparent;
+      text-transform: uppercase;
+      padding-bottom: 10px;
+    }
+    h4 {
+      padding: 0 30px;
+      color: #fff;
+      font-size: 16px;
+      margin: 0;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+    p {
+      padding: 0 30px;
+      color: #fff!important;
+      font-size: 15px;
+    }
+    form {
+      padding: 0 30px;
+      display: block;
+      float: left;
+      width: 100%;
+      box-sizing: border-box;
+      margin-top: 20px;
+      margin-bottom: 50px;
+      input#email {
+        display: block;
+        width: 160px;
+        height: 33px;
+        float: left;
+        border: none;
+        outline: none;
+        padding: 0 15px;
+        box-sizing: border-box;
+      }
+      input#submit-email {
+        color: #fff;
+        text-align: center;
+        background: #e74904;
+        display: block;
+        width: 80px;
+        height: 35px;
+        float: right;
+        border: none;
+        outline: none;
+        font-weight: bold;
+        font-size: 15px;
+        padding: 0;
+      }
+    }
+    .sent-email {
+      padding: 0 30px;
+      display: block;
+      float: left;
+      width: 100%;
+      box-sizing: border-box;
+      margin-top: 10px;
+      margin-bottom: 15px;
+      p {
+        padding: 15px 20px;
+        background-color: #a0a1a3;
+        text-align: center;
+      }
+    }
+    a.contact-me {
+      padding: 0 30px;
+      box-sizing: border-box;
+      float: left;
+      display: block;
+      width: 100%;
+      margin-top: 20px;
+      span {
+        color: #fff;
+        text-align: center;
+        background: #e74904;
+        display: block;
+        float: right;
+        border: none;
+        outline: none;
+        font-weight: bold;
+        font-size: 15px;
+        width: 100%;
+        padding: 10px 0;
+      }
+    }
+    a.new-calc {
+      padding: 0 30px;
+      box-sizing: border-box;
+      float: left;
+      display: block;
+      width: 100%;
+      margin-top: 20px;
+      span {
+        color: #fff;
+        text-align: left;
+        display: block;
+        float: left;
+        border: none;
+        outline: none;
+        font-weight: normal;
+        text-transform: uppercase;
+        font-size: 13px;
+        padding-left: 25px;
+        /*background: url("../images/icon-new-calc.png") no-repeat top left;*/
+      	@include getsprite($icon-new-calc);
+      }
+    }
+    .bottom-links {
+      padding: 30px;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      right: 0;
+      box-sizing: border-box;
+      a {
+        background: #7f7f7f;
+        color: #fff;
+        display: block;
+        padding: 10px;
+        text-align: center;
+        font-size: 15px;
+        margin-top: 10px;
+      }
+    }
+    #saving-amount {
+      padding: 0 30px;
+      margin-bottom: 50px;
+      span {
+        display: block;
+        background-color: #e2e2e4;
+        color: #e64b00;
+        font-size: 28px;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 15px;
+        font-weight: bold;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=2, Direction=135, Color=#000000)";
+        /*IE 8*/
+        -moz-box-shadow: 1px 1px 2px 1px rgba(0,0,0,0.2) inset;
+        /*FF 3.5+*/
+        -webkit-box-shadow: 1px 1px 2px 1px rgba(0,0,0,0.2) inset;
+        /*Saf3-4, Chrome, iOS 4.0.2-4.2, Android 2.3+*/
+        box-shadow: 1px 1px 2px 1px rgba(0,0,0,0.2) inset;
+        /* FF3.5+, Opera 9+, Saf1+, Chrome, IE10 */
+        filter:progid:DXImageTransform.Microsoft.Shadow(Strength=2, Direction=135, Color=#000000);
+        /*IE 5.5-7*/
+      }
+    }
+    div.separator {
+      padding: 10px 30px 20px;
+      display: block;
+      width: 100%;
+      float: left;
+      box-sizing: border-box;
+      &:before {
+        content: "";
+        width: 100%;
+        height: 1px;
+        border-bottom: 1px dotted #ccc;
+        display: block;
+      }
+    }
+  }
+  #data-info-tip {
+    background-color: #fff;
+    position: absolute;
+    font-size: 12px;
+    border: 1px solid #ddd;
+    width: 150px;
+    z-index: 99999;
+    display: none;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=1, Direction=135, Color=#000000)";
+    /*IE 8*/
+    -moz-box-shadow: 2px 2px 1px rgba(0,0,0,0.2);
+    /*FF 3.5+*/
+    -webkit-box-shadow: 2px 2px 1px rgba(0,0,0,0.2);
+    /*Saf3-4, Chrome, iOS 4.0.2-4.2, Android 2.3+*/
+    box-shadow: 2px 2px 1px rgba(0,0,0,0.2);
+    /* FF3.5+, Opera 9+, Saf1+, Chrome, IE10 */
+    filter:progid:DXImageTransform.Microsoft.Shadow(Strength=1, Direction=135, Color=#000000);
+    /*IE 5.5-7*/
+    span {
+      display: block;
+      font-weight: normal;
+      padding: 10px;
+      border-bottom: 1px solid #ddd;
+      padding-top: 0;
+      &.title {
+        font-weight: bold;
+        border-bottom: 0 solid #ddd;
+        padding-bottom: 0;
+        padding-top: 10px;
+      }
+    }
+  }
+}
+
+
+
+.calc .learn-more
+.calc .learn-more #saving-amount
+.calc .learn-more
+.calc .learn-more div.separator
+.calc
+.calc #data-info-tip
+.calc #data-info-tip span
+.calc-contact .calc-left .calc-container
+#sidel-calc-submit {
+  background-color: #e64b00;
+  width: 100%;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  color: #fff;
+  padding: 10px 0;
+  height: 50px;
+  margin-top: 30px;
+  border: none;
+}
+
+#send-mail-form
+{
+    position:relative;
+}
+
+#send-mail-form label.error
+{
+    color: #e51c20;
+    position: absolute;
+    top: 36px;
+    left: 30px;
+    width: 250px;
+    font-size: 11px;
+    font-style: italic;
+	margin-bottom:5px;
+}
+
+label.error-email
+{
+    left: 30px;
+    position: absolute;
+    font-size:15px;
+    padding: 15px 20px;
+    background-color: #A0A1A3;
+    text-align: center;
+    display: block;
+    width: 210px;
+    top: 40px;
+}
+
+    label.error-email p
+    {
+        color: #e51c20 !important;
+    }

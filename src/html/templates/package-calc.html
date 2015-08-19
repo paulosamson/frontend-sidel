@@ -1,59 +1,8 @@
-
-<!DOCTYPE html>
-
-  <!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
-  <!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
-  <!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
-  <!--[if gt IE 8]><!--> <html class='no-js' lang="en"><!--<![endif]-->
-    <head>
-       <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge"><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info = {"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"6fc69d0325","applicationID":"6056139","transactionName":"blEENxYCCkQHBRdQV1cbJzA0TABSAAcWVUwXVRUTHA==","queueTime":1,"applicationTime":120,"ttGuid":"EB8151DAEED5D3A7","agent":"js-agent.newrelic.com/nr-686.min.js"}</script><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o?o:n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({QJf3ax:[function(e,n){function t(e){function n(n,t,a){e&&e(n,t,a),a||(a={});for(var u=c(n),f=u.length,s=i(a,o,r),p=0;f>p;p++)u[p].apply(s,t);return s}function a(e,n){f[e]=c(e).concat(n)}function c(e){return f[e]||[]}function u(){return t(n)}var f={};return{on:a,emit:n,create:u,listeners:c,_events:f}}function r(){return{}}var o="nr@context",i=e("gos");n.exports=t()},{gos:"7eSDFh"}],ee:[function(e,n){n.exports=e("QJf3ax")},{}],3:[function(e,n){function t(e){return function(){r(e,[(new Date).getTime()].concat(i(arguments)))}}var r=e("handle"),o=e(1),i=e(2);"undefined"==typeof window.newrelic&&(newrelic=window.NREUM);var a=["setPageViewName","addPageAction","setCustomAttribute","finished","addToTrace","inlineHit","noticeError"];o(a,function(e,n){window.NREUM[n]=t("api-"+n)}),n.exports=window.NREUM},{1:12,2:13,handle:"D5DuLP"}],gos:[function(e,n){n.exports=e("7eSDFh")},{}],"7eSDFh":[function(e,n){function t(e,n,t){if(r.call(e,n))return e[n];var o=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:o,writable:!0,enumerable:!1}),o}catch(i){}return e[n]=o,o}var r=Object.prototype.hasOwnProperty;n.exports=t},{}],D5DuLP:[function(e,n){function t(e,n,t){return r.listeners(e).length?r.emit(e,n,t):void(r.q&&(r.q[e]||(r.q[e]=[]),r.q[e].push(n)))}var r=e("ee").create();n.exports=t,t.ee=r,r.q={}},{ee:"QJf3ax"}],handle:[function(e,n){n.exports=e("D5DuLP")},{}],XL7HBI:[function(e,n){function t(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:i(e,o,function(){return r++})}var r=1,o="nr@id",i=e("gos");n.exports=t},{gos:"7eSDFh"}],id:[function(e,n){n.exports=e("XL7HBI")},{}],G9z0Bl:[function(e,n){function t(){var e=d.info=NREUM.info,n=f.getElementsByTagName("script")[0];if(e&&e.licenseKey&&e.applicationID&&n){c(p,function(n,t){n in e||(e[n]=t)});var t="https"===s.split(":")[0]||e.sslForHttp;d.proto=t?"https://":"http://",a("mark",["onload",i()]);var r=f.createElement("script");r.src=d.proto+e.agent,n.parentNode.insertBefore(r,n)}}function r(){"complete"===f.readyState&&o()}function o(){a("mark",["domContent",i()])}function i(){return(new Date).getTime()}var a=e("handle"),c=e(1),u=window,f=u.document;e(2);var s=(""+location).split("?")[0],p={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-686.min.js"},d=n.exports={offset:i(),origin:s,features:{}};f.addEventListener?(f.addEventListener("DOMContentLoaded",o,!1),u.addEventListener("load",t,!1)):(f.attachEvent("onreadystatechange",r),u.attachEvent("onload",t)),a("mark",["firstbyte",i()])},{1:12,2:3,handle:"D5DuLP"}],loader:[function(e,n){n.exports=e("G9z0Bl")},{}],12:[function(e,n){function t(e,n){var t=[],o="",i=0;for(o in e)r.call(e,o)&&(t[i]=n(o,e[o]),i+=1);return t}var r=Object.prototype.hasOwnProperty;n.exports=t},{}],13:[function(e,n){function t(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(0>o?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=t},{}]},{},["G9z0Bl"]);</script>
-        <meta name="viewport" content="width=1200" />
+@@include('../components/doc-head.html',{
+  "title" : "Static Package Calculator"
+})
 
 
-
-        <meta name="robots" content="index, follow" />
-        <title>Calculate your bottle’s full potential</title>
-        <meta name="title" content="Calculate your bottle’s full potential" />
-        <meta name="keywords" content="Sidel" />
-        <meta name="description" content="Sidel" />
-        <meta name="Content-language" content="da-DK" />
-        <meta name="language" content="da-DK" />
-        <meta name="author" content="admin" />
-        <meta name="dcterms.rights" content="Copyright 2012" />
-        <meta name="pubdate" content="2015-04-15T19:07:35" />
-        <meta name="resource-type" content="Document" />
-        <meta name="owner" content="Sidel" />
-        <!--Document settings-->
-
-
-
-        <!-- all styles -->
-         <link href="/bundles/sidel-all.css?v=sdOgiK1Ft0rKezqy5fK4a45u1DUzEJDRWvmCd1oRIUA1" rel="stylesheet"/>
-
-
-        <link rel="icon" href="http://www.sidel.com/sidel-favicon.ico" type="image/x-icon" />
-        <link rel="shortcut icon" href="http://www.sidel.com/sidel-favicon.ico" type="image/x-icon" />
-
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-
-        <script src="/bundles/sidel-head-all.js?v=uByzwSJ8mPzxIV8J77cCyPpex_8uNDDNvOUZtiWIgag1"></script>
-
-
-        <!--[if IE 8]> <script type="text/javascript" src="http://www.sidel.com/scripts/selectivizr-min.js"></script> <![endif]-->
-
-        <script>
-var _prum = [['id', '5595340eabe53dfa30a218ac'],
-             ['mark', 'firstbyte', (new Date()).getTime()]];
-(function() {
-    var s = document.getElementsByTagName('script')[0]
-      , p = document.createElement('script');
-    p.async = 'async';
-    p.src = '//rum-static.pingdom.net/prum.min.js';
-    s.parentNode.insertBefore(p, s);
-})();
-</script>
-    </head>
     <body id="EN" class="Dokument wide-page " data-splash="0" data-splash-lang="" >
 
         <!-- Main Content -->
@@ -68,362 +17,7 @@ var _prum = [['id', '5595340eabe53dfa30a218ac'],
 <!-- Initialization -->
 
 
-    <header class="topbar">
-        <div class="masthead page-width">
-
-
-
-<!-- Variables -->
-
-
-<!-- Initialization -->
-
-
-    <nav class="topnav">
-        <ul>
-            <!-- Language Dropdown -->
-            <li class="dropdown">
-                <a href="#" id="languageMenuHover">Language/中文版</a>
-                <ul id="languageMenu" data-nodename="Packaging Calculator" data-level="2">
-                    <!-- Loaded from ajax -->
-                </ul>
-            </li>
-            <!-- End language dropdown -->
-
-                <li>
-                    	<a href="http://www.sidel.com/about-sidel/contact" >
-        Contact
-	</a>
-
-                </li>
-                <li>
-                    	<a href="http://www.sidel.com/about-sidel/media" >
-        Media
-	</a>
-
-                </li>
-
-            <li>
-                    <a href="/login/"  target=_blank >
-					    Login<span style="margin-left:5px;"><img src="/images/icon-lock.png" alt="lock"/></span>
-				    </a>
-			</li>
-
-            <li style="width: 120px;padding: 0 0 0 10px;">
-                <form id="search-form" name="search-form" method="get" action="http://www.sidel.com/search" style="position: relative;">
-                    <input class="search-input" type="text" name="search">
-                    <input class="search-submit" type="image" alt="søg" src="/images/icon-search.png">
-                </form>
-            </li>
-        </ul>
-    </nav>
-
-
-
-<!-- Helpers -->
-
-
-
-
-            <!-- Variables -->
-
-
-<!-- Initialization -->
-
-
-    <nav class="menu" id="menu">
-        <ul class="main-menu fouc">
-            <!-- Level 1 -->
-                <li class="pos-1  sub-col-3">
-                    	<a href="http://www.sidel.com/about-sidel" >
-        About Sidel
-	</a>
-
-
-                        <div class="sub-wrapper">
-                            <div class="sub-menu">
-                                <!-- Level 2 -->
-<ul class="sub-nav-group">                                    <li>
-                                        	<a href="http://www.sidel.com/about-sidel/media" >
-        Media
-	</a>
-
-                                                <ul class="sub-menu-level-2">
-                                                    <!-- Level 3 -->
-                                                        <li>
-                                                            	<a href="http://www.sidel.com/about-sidel/media/press-releases" >
-        Press releases
-	</a>
-
-                                                        </li>
-                                                        <li>
-                                                            	<a href="http://www.sidel.com/about-sidel/media/press-contact" >
-        Press contact
-	</a>
-
-                                                        </li>
-                                                </ul>
-                                    </li>
-                                    <li>
-                                        	<a href="http://www.sidel.com/about-sidel/events" >
-        Events
-	</a>
-
-                                    </li>
-                                    <li>
-                                        	<a href="http://www.sidel.com/about-sidel/sustainability" >
-        Sustainability
-	</a>
-
-                                    </li>
-</ul><ul class="sub-nav-group">                                    <li>
-                                        	<a href="http://www.sidel.com/about-sidel/more-about-sidel" >
-        More about Sidel
-	</a>
-
-                                    </li>
-                                    <li>
-                                        	<a href="http://www.sidel.com/about-sidel/global-references" >
-        Global References
-	</a>
-
-                                    </li>
-                                    <li>
-                                        	<a href="http://www.sidel.com/about-sidel/careers" >
-        Careers
-	</a>
-
-                                    </li>
-</ul><ul class="sub-nav-group">                                    <li>
-                                        	<a href="http://www.sidel.com/about-sidel/contact" >
-        Contact
-	</a>
-
-                                                <ul class="sub-menu-level-2">
-                                                    <!-- Level 3 -->
-                                                        <li>
-                                                            	<a href="http://www.sidel.com/about-sidel/contact/north-america" >
-        North America
-	</a>
-
-                                                        </li>
-                                                        <li>
-                                                            	<a href="http://www.sidel.com/about-sidel/contact/latin-america" >
-        Latin America
-	</a>
-
-                                                        </li>
-                                                        <li>
-                                                            	<a href="http://www.sidel.com/about-sidel/contact/europe-and-central-asia" >
-        Europe & Central Asia
-	</a>
-
-                                                        </li>
-                                                        <li>
-                                                            	<a href="http://www.sidel.com/about-sidel/contact/greater-middle-east-and-africa" >
-        Greater Middle East & Africa
-	</a>
-
-                                                        </li>
-                                                        <li>
-                                                            	<a href="http://www.sidel.com/about-sidel/contact/greater-china" >
-        Greater China
-	</a>
-
-                                                        </li>
-                                                        <li>
-                                                            	<a href="http://www.sidel.com/about-sidel/contact/south-east-asia-pacific" >
-        South East Asia Pacific
-	</a>
-
-                                                        </li>
-                                                </ul>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                </li>
-                <li class="pos-2  sub-col-3">
-                    	<a href="http://www.sidel.com/services" >
-        Services
-	</a>
-
-
-                        <div class="sub-wrapper">
-                            <div class="sub-menu">
-                                <!-- Level 2 -->
-<ul class="sub-nav-group">                                    <li>
-                                        	<a href="http://www.sidel.com/services/maintenance" >
-        Maintenance
-	</a>
-
-                                    </li>
-                                    <li>
-                                        	<a href="http://www.sidel.com/services/line-improvement" >
-        Line improvement
-	</a>
-
-                                    </li>
-                                    <li>
-                                        	<a href="http://www.sidel.com/services/training" >
-        Training
-	</a>
-
-                                    </li>
-</ul><ul class="sub-nav-group">                                    <li>
-                                        	<a href="http://www.sidel.com/services/spare-parts-logistics" >
-        Spare Parts & Logistics
-	</a>
-
-                                    </li>
-                                    <li>
-                                        	<a href="http://www.sidel.com/services/line-conversions-moulds" >
-        Line Conversions & Moulds
-	</a>
-
-                                    </li>
-                                    <li>
-                                        	<a href="http://www.sidel.com/services/packaging" >
-        Packaging
-	</a>
-
-                                    </li>
-</ul><ul class="sub-nav-group">                                    <li>
-                                        	<a href="http://www.sidel.com/services/a-little-bit-more" >
-        A Little Bit More
-	</a>
-
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                </li>
-                <li class="pos-3  sub-col-3">
-                    	<a href="http://www.sidel.com/equipment" >
-        Equipment
-	</a>
-
-
-                        <div class="sub-wrapper">
-                            <div class="sub-menu">
-                                <!-- Level 2 -->
-<ul class="sub-nav-group">                                    <li>
-                                        	<a href="http://www.sidel.com/equipment/blowing" >
-        Blowing
-	</a>
-
-                                    </li>
-                                    <li>
-                                        	<a href="http://www.sidel.com/equipment/dry-preform-decontamination" >
-        Dry preform decontamination
-	</a>
-
-                                    </li>
-                                    <li>
-                                        	<a href="http://www.sidel.com/equipment/filling" >
-        Filling
-	</a>
-
-                                    </li>
-</ul><ul class="sub-nav-group">                                    <li>
-                                        	<a href="http://www.sidel.com/equipment/blowing-filling-capping-system" >
-        Blowing-filling-capping system
-	</a>
-
-                                    </li>
-                                    <li>
-                                        	<a href="http://www.sidel.com/equipment/labelling" >
-        Labelling
-	</a>
-
-                                    </li>
-                                    <li>
-                                        	<a href="http://www.sidel.com/equipment/end-of-line-solutions" >
-        End of line solutions
-	</a>
-
-                                    </li>
-</ul><ul class="sub-nav-group">                                    <li>
-                                        	<a href="http://www.sidel.com/equipment/complete-lines" >
-        Complete lines
-	</a>
-
-                                    </li>
-                                    <li>
-                                        	<a href="http://www.sidel.com/equipment/sidel-matrix" >
-        Sidel Matrix
-	</a>
-
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                </li>
-                <li class="pos-4  sub-col-2">
-                    	<a href="http://www.sidel.com/your-liquids" >
-        Your beverages
-	</a>
-
-
-                        <div class="sub-wrapper">
-                            <div class="sub-menu">
-                                <!-- Level 2 -->
-<ul class="sub-nav-group">                                    <li>
-                                        	<a href="http://www.sidel.com/your-liquids/water" >
-        Water
-	</a>
-
-                                    </li>
-                                    <li>
-                                        	<a href="http://www.sidel.com/your-liquids/juices,-nectars,-soft-drinks,-isotonics,-teas" >
-        Juices, Nectars, Soft Drinks, Isotonics & Teas (JNSDIT)
-	</a>
-
-                                    </li>
-                                    <li>
-                                        	<a href="http://www.sidel.com/your-liquids/carbonated-soft-drinks-(csd)" >
-        Carbonated Soft Drinks (CSD)
-	</a>
-
-                                    </li>
-</ul><ul class="sub-nav-group">                                    <li>
-                                        	<a href="http://www.sidel.com/your-liquids/liquid-dairy-products" >
-        Liquid Dairy Products (LDP)
-	</a>
-
-                                    </li>
-                                    <li>
-                                        	<a href="http://www.sidel.com/your-liquids/beer" >
-        Beer
-	</a>
-
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                </li>
-                <li class="pos-5 last sub-col-0">
-                    	<a href="http://www.sidel.com/why-pet" >
-        Why PET
-	</a>
-
-
-                </li>
-        </ul>
-    </nav>
-<!-- Helpers -->
-
-
-
-
-            <figure class="branding">
-                <a href="/" id="logo">
-                    <img src="/images/logo.png" alt="Sidel - A better match" class="subpage-main-logo" />
-                </a>
-            </figure>
-        </div>
-        <div id="topbar-dropshadow"></div>
-    </header>
+    @@include('../components/page-header.html')
 
 
 
@@ -489,7 +83,7 @@ var _prum = [['id', '5595340eabe53dfa30a218ac'],
     </style>
 
 
-    <div id="pack-calc-wrap"
+    <div
         data-email-template="http://www.sidel.com/PackagingCalculatorEmail"
         data-from-name="Your bottle’s full potential"
         data-mail-subject="Sidel Services"
@@ -497,450 +91,178 @@ var _prum = [['id', '5595340eabe53dfa30a218ac'],
         data-expert-email="services@sidel.com?subject=Please help me optimise my bottle"
     >
 
-            <script id="pack-calc-template" type="text/x-jquery-tmpl">
-        <div class="calc">
-		    <div class="box calc-left">
-			    <div class="calc-container">
-				    <h2>Calculate my savings
-					    <span>Please fill in all fields to make the calculation.</span>
-				    </h2>
-
-				    <form id="pack-calc-form">
-                        <!-- Product type -->
-					    <div class="line zebra">
-						    <label class="field-name">BEVERAGE TYPE</label>
-						    <div class="input" id="productTypeCnt" data-error-msg="Product type is required">
-                                <div style="display:inline-block;">
-							        <input type="radio" name="productCategory" id="water"
-                                        value="Water"
-                                        {{if typeof ProductType != 'undefined' && ProductType == 'Water'}}checked="checked"{{/if}}
-                                    />
-                                    <label for="water"
-                                        data-tip="Do you produce water or carbonated soft drinks?"
-                                        class="help-tip">
-                                        Water
-                                    </label>
-                                </div>
-
-                                <div style="display:inline-block;">
-							        <input type="radio" name="productCategory" id="csd"
-                                        value="CSD"
-                                        {{if typeof ProductType != 'undefined' && ProductType == 'CSD'}}checked="checked"{{/if}}
-                                    />
-                                    <label for="csd"
-                                        data-tip="Do you produce water or carbonated soft drinks?"
-                                        class="help-tip">
-                                            Carbonated Soft Drinks (CSD)
-                                    </label>
-                                </div>
-						    </div>
-					    </div>
-
-                        <!-- Current bottle neck format -->
-					    <div class="line zebra">
-						    <label class="field-name">CURRENT BOTTLE NECK FORMAT</label>
-						    <div class="input" id="bottleNeckFormatCnt" data-error-msg="Current bottle neck format is required">
-
-							    <select name="bottleNeckFormat" data-tip="Does your bottle have a standard neck or a short neck? The international standard neck for water is 30/25 (30 mm thread diameter and 25 mm inner diameter), and 29/25 for a short neck. For CSD, a standard neck has a PCO of 1810 and PCO 1881 for a short neck (which is lighter mainly because it is shorter in height)."
-                                    class="help-tip"
-                                >
-								    <option value="">Choose your format</option>
-								    <option
-                                        class="option-neck-format"
-                                        data-water="Standard neck for water (30/25 or larger)"
-                                        data-csd="Standard neck for CSD (PCO 1810)"
-                                        value="StandardNeck"
-                                        {{if typeof BottleNeckFormat != 'undefined' && BottleNeckFormat == 'StandardNeck'}}selected="selected"{{/if}}
-                                    ></option>
-
-								    <option
-                                        class="option-neck-format"
-                                        data-water="Short neck for water (29/25) "
-                                        data-csd="Short neck for CSD (PCO 1881)"
-                                        value="ShortNeck"
-                                        {{if typeof BottleNeckFormat != 'undefined' && BottleNeckFormat == 'ShortNeck'}}selected="selected"{{/if}}
-                                    ></option>
-
-							    </select>
-
-						    </div>
-					    </div>
-
-                        <!-- PET COST -->
-					    <div class="line zebra">
-						    <label class="field-name">PET COSTS PER TONNE FOR BOTTLE (EUROS)</label>
-						    <div class="input" id="petCostPerTonForBottleCnt" data-error-msg="Use only numbers in the input field, no commas and alike">
-							    <input type="text"
-                                    autocomplete="off"
-                                    name="petCostPerTonForBottle"
-                                    placeholder="Eg. 1500"
-                                    data-tip="What are your current PET costs per tonne for the bottle? If you don't know, use the average cost: 1,500 euros"
-                                    value="${StrPETCostPerTonForBottle}"
-                                    class="help-tip"
-                                />
-						    </div>
-					    </div>
-
-
-					    <!-- HDPE COST -->
-					    <div class="line zebra">
-						    <label class="field-name">HDPE COSTS PER TONNE FOR CAP (EUROS)</label>
-						    <div class="input" id="hdpeCostPerTonForCapCnt" data-error-msg="Use only numbers in the input field, no commas and alike">
-							    <input type="text"
-                                    autocomplete="off"
-                                    name="hdpeCostPerTonForCap"
-                                    placeholder="Eg. 1100"
-                                    data-tip="What are your current PET costs per tonne for the cap? If you don't know, use the average cost: 1,100 euros"
-                                    value="${StrHDPECostPerTonForCap}"
-                                    class="help-tip"
-                                />
-						    </div>
-					    </div>
-
-                        <!-- Annual production hours -->
-					    <div class="line zebra">
-						    <label class="field-name">ANNUAL PRODUCTION HOURS <br/> (RUNNING HOURS PER YEAR)</label>
-						    <div class="input" id="annualProductionHoursCnt" data-error-msg="Use only numbers in the input field, no commas and alike">
-							    <input type="text"
-                                    autocomplete="off"
-                                    name="annualProductionHours"
-                                    placeholder="Eg. 4000"
-                                    data-tip="Approximately how many hours of running production do you have a year? If you don't know, use an average amount: 4,000 hours"
-                                    value="${StrAnnualProductionHours}"
-                                    class="help-tip"
-                                />
-						    </div>
-					    </div>
-
-                        <!-- Blower speed -->
-					    <div class="line zebra">
-						    <label class="field-name">BLOWER SPEED <br/> (BOTTLES PER HOUR)</label>
-						    <div class="input" id="blowerSpeedCnt" data-error-msg="Use only numbers in the input field, no commas and alike">
-							    <input type="text"
-                                    autocomplete="off"
-                                    name="blowerSpeed"
-                                    placeholder="Eg. 36000"
-                                    data-tip="How many bottles does your blower produce an hour? If you don't know, use an average amount: 36,000 bottles"
-                                    value="${StrBlowerSpeed}"
-                                    class="help-tip"
-                                />
-						    </div>
-					    </div>
-
-                        <!-- Bottle size -->
-					    <div class="line zebra">
-						    <label class="field-name">BOTTLE SIZE (LITRES)</label>
-						    <div class="input" id="bottleSizeCnt" data-error-msg="Bottle size is required">
-							    <select name="bottleSize" data-tip="What size is the bottle being produced? Choose one of the two options."
-                                    class="help-tip"
-                                    >
-								    <option value="">Choose size</option>
-
-								    <option
-                                        value="SingleServe"
-                                        {{if typeof BottleSize != 'undefined' && BottleSize == 'SingleServe'}}selected="selected"{{/if}}
-                                    >
-                                        Single serve (0.5 litre)
-								    </option>
-
-								    <option
-                                        value="MultiServe"
-                                        {{if typeof BottleSize != 'undefined' && BottleSize == 'MultiServe'}}selected="selected"{{/if}}
-                                    >
-                                        Multi serve (2 litres)
-								    </option>
-							    </select>
-						    </div>
-					    </div>
-
-                        <!-- Blower equipment -->
-					    <div class="line zebra">
-						    <label class="field-name">BLOWER EQUIPMENT TYPE</label>
-						    <div class="input" id="blowerEquipmentTypeCnt" data-error-msg="Blower equipment type is required">
-							    <select name="blowerEquipmentType" data-tip="Which type of blower are you using? Choose one of the four options. If you do not have a Sidel blower, choose “Other blower”. Figures for other blowers are based on Sidel Universal figures."
-                                    class="help-tip"
-                                    >
-								    <option value="">Choose equipment type</option>
-
-								    <option
-                                        value="SidelMatrix"
-                                        {{if typeof BlowerEquipmentType != 'undefined' && BlowerEquipmentType == 'SidelMatrix'}}selected="selected"{{/if}}
-                                    >
-                                        Sidel Matrix™
-								    </option>
-
-								    <option
-                                        value="SidelUniversal"
-                                        {{if typeof BlowerEquipmentType != 'undefined' && BlowerEquipmentType == 'SidelUniversal'}}selected="selected"{{/if}}
-                                    >
-                                        Sidel Universal
-								    </option>
-
-								    <option
-                                        value="SidelSeries"
-                                        {{if typeof BlowerEquipmentType != 'undefined' && BlowerEquipmentType == 'SidelSeries'}}selected="selected"{{/if}}
-                                    >
-                                        Sidel Series 2
-								    </option>
-
-                                    <option
-                                        value="OtherBlower"
-                                        {{if typeof BlowerEquipmentType != 'undefined' && BlowerEquipmentType == 'OtherBlower'}}selected="selected"{{/if}}
-                                    >
-                                        Other blower
-								    </option>
-							    </select>
-						    </div>
-					    </div>
-					    <div class="line submit-button">
-						    <div class="input">
-							    <input class="textshadow"
-                                    id="pack-calc-submit"
-                                    type="submit"
-                                    value="CALCULATE SAVINGS"  />
-
-                                    <input type="hidden"
-        name="const_Water_PetGramsSavedOnNeck"
-        value="1.33"
-    />
-    <input type="hidden"
-        name="const_CSD_PetGramsSavedOnNeck"
-        value="1.19"
-    />
-
-
-                                    <input type="hidden"
-        name="const_Water_HDPEGramsSavedOnCap"
-        value="0.54"
-    />
-    <input type="hidden"
-        name="const_CSD_HDPEGramsSavedOnCap"
-        value="0.45"
-    />
-
-
-                                    <input type="hidden"
-        name="const_Water_SingleServe_PETGramsSavedOnBottle"
-        value="1"
-    />
-    <input type="hidden"
-        name="const_CSD_SingleServe_PETGramsSavedOnBottle"
-        value="1"
-    />
-
-
-                                    <input type="hidden"
-        name="const_Water_MultiServe_PETGramsSavedOnBottle"
-        value="2"
-    />
-    <input type="hidden"
-        name="const_CSD_MultiServe_PETGramsSavedOnBottle"
-        value="1.8"
-    />
-
-
-                                    <input type="hidden"
-        name="const_Water_SingleServe_SidelSeries_EnergySaving"
-        value="0.000337777777777778"
-    />
-    <input type="hidden"
-        name="const_CSD_SingleServe_SidelSeries_EnergySaving"
-        value="0.000335555555555556"
-    />
-
-
-                                    <input type="hidden"
-        name="const_Water_SingleServe_SidelUniversal_EnergySaving"
-        value="0.0000377777777777778"
-    />
-    <input type="hidden"
-        name="const_CSD_SingleServe_SidelUniversal_EnergySaving"
-        value="0.0000355555555555556"
-    />
-
-
-                                    <input type="hidden"
-        name="const_Water_SingleServe_SidelMatrix_EnergySaving"
-        value="0.0000711111111111111"
-    />
-    <input type="hidden"
-        name="const_CSD_SingleServe_SidelMatrix_EnergySaving"
-        value="0.0000688888888888889"
-    />
 
 
 
-                                    <input type="hidden"
-        name="const_Water_MultiServe_SidelSeries_EnergySaving"
-        value="0.000395555555555556"
-    />
-    <input type="hidden"
-        name="const_CSD_MultiServe_SidelSeries_EnergySaving"
-        value="0.000391111111111111"
-    />
 
-
-                                    <input type="hidden"
-        name="const_Water_MultiServe_SidelUniversal_EnergySaving"
-        value="0.000266666666666667"
-    />
-    <input type="hidden"
-        name="const_CSD_MultiServe_SidelUniversal_EnergySaving"
-        value="0.000264444444444444"
-    />
-
-
-                                    <input type="hidden"
-        name="const_Water_MultiServe_SidelMatrix_EnergySaving"
-        value="0.000164444444444444"
-    />
-    <input type="hidden"
-        name="const_CSD_MultiServe_SidelMatrix_EnergySaving"
-        value="0.000162222222222222"
-    />
-
-						    </div>
-					    </div>
-				    </form>
-			    </div>
-		    </div>
-		    <aside class="box calc-right">
-			    <h3>Complete this form and click CALCULATE SAVINGS to see how much you could save with a Sidel StarLite base and a shorter neck.</h3>
-			    <p class="helper-note">
-                    Click or mouse over a field to reveal tips and supporting info.
-			    </p>
-		    </aside>
-		    <div id="data-tip" data-content="TOOLTIP:"></div>
-	    </div>
-    </script>
-
-
-            <script id="pack-result-template" type="text/x-jquery-tmpl">
-    <div class="calc calc2">
-		<div class="box calc-left">
-			<div class="calc-container">
-				<h2>Congratulations!
-                    {{if typeof Input.BottleNeckFormat != 'undefined' && Input.BottleNeckFormat == 'StandardNeck'}}
-					<span>With a shorter neck and a Sidel StarLite™ base you can cut your costs significantly.</span>
-                    {{else}}
-                    <span>By implementing a Sidel StarLite base, you can cut your costs significantly.</span>
-                    {{/if}}
-				</h2>
-
-				<div class="calc-results" >
-					<h3>YOUR CALCULATION RESULT</h3>
-
-					<div class="calc-material-savings">
-						<div class="line head">
-							<p class="left">MATERIAL SAVINGS</p>
-							<p class="right"><strong>Savings</strong> (tonnes per year)</p>
-						</div>
-						<div class="line info-tip" data-info-old="${Input.StrPETCostPerTonForBottle} t" data-info-new="${Output.StrPETNewUsage} t" data-info-sav="${Output.StrPETRawMaterialSavings} tonnes" data-info-sav-pct="${Output.StrPetSavingsInPercentage}">
-							<p class="left">PET raw material savings</p>
-							<p class="right">${Output.StrPETRawMaterialSavings} tonnes</p>
-						</div>
-						<div class="line info-tip" data-info-old="${Input.StrHDPECostPerTonForCap} t" data-info-new="${Output.StrHDPENewUsage} t" data-info-sav="${Output.StrHDPERawMaterialSavings} tonnes" data-info-sav-pct="${Output.StrHDPESavingsInPercentage}">
-							<p class="left">HDPE raw material savings</p>
-							<p class="right">${Output.StrHDPERawMaterialSavings} tonnes</p>
-						</div>
-					</div>
-
-					<div class="calc-cost-savings">
-						<div class="line head">
-							<p class="left">COST SAVINGS</p>
-							<p class="right"><strong>Savings</strong> (euros per year)</p>
-						</div>
-						<div class="line">
-							<p class="left">PET cost savings</p>
-							<p class="right">${Output.StrPETCostSavings} euros</p>
-						</div>
-						<div class="line">
-							<p class="left">HDPE cost savings</p>
-							<p class="right">${Output.StrHDPECostSavings} euros</p>
-						</div>
-						<div class="line">
-							<p class="left">Energy savings</p>
-							<p class="right">${Output.StrEnergySavings} euros</p>
-						</div>
-					</div>
-
-					<div class="calc-totals">
-						<div class="line head">
-							<p class="left">TOTAL SAVINGS</p>
-							<p class="right">
-                                <i>
-                                    <span class="amount">${Output.StrTotalCostSavings}</span>
-                                    <span class="pryr">euros<br>per year</span>
-                                </i>
-                            </p>
-						</div>
-					</div>
-
-					<div class="calc-disclaimer">
-						<p>
-							This calculation is based on average figures and is not legally binding. Contact one of our experts for a more in-depth calculation.
-						</p>
-					</div>
-				</div>
-			</div>
-		</div>
-		<aside class="box calc-right learn-more">
-			<h3>LEARN MORE</h3>
-			<h4>Send your calculation to others</h4>
-			<p>Please separate e-mail addresses with a comma to send to more than one recipient.</p>
-			<form id="send-mail-form" data-validation-msg="Please enter a valid email address.">
-				<input type="text" id="email" name="email" placeholder="E-mail address(es)"/>
-				<input type="submit" id="submit-email" value="SEND">
-                <img style="display:none;margin-left:14px;cursor:wait;" id="loader" src="/images/email-orange-loader.gif" alt="loader" width="30" height="30"/>
-                 <label class="error-email" style="display:none;">
-				    <p style="color: #e51c20 !important;">Please try once again</p>
-			    </label>
-			</form>
-			<div class="sent-email" style="display:none;">
-				<p>Your savings calculation was succesfully sent.</p>
-			</div>
-
-			<div class="separator"></div>
-			<h4>Get in contact with an expert</h4>
-			<p>Talk to one of our Sidel specialists to learn more about your package’s potential.</p>
-
-
-			<a class="contact-me"
-                href="mailto:services@sidel.com?subject=Please help me optimise my bottle
-                    &body=${Output.MailBodyTextDisplay}">
-                <span>
-                    CONTACT AN EXPERT
-                </span>
-			</a>
-			<a class="new-calc" href="#"><span>NEW CALCULATION</span></a>
-
-			<div class="bottom-links">
-				<a class="textshadow" target="_blank" href="http://www.sidel.com/services/packaging">
-                    About Sidel’s packaging services
-				</a>
-				<a class="textshadow" target="_blank" href="http://www.sidel.com/services/packaging/packaging-and-preform-design/sidel-starlite">
-                    About Sidel StarLite bottle bases
-				</a>
-			</div>
-		</aside>
-		<div id="data-info-tip">
-			<span class="title">OLD USAGE:</span>
-			<span class="info-old-usage"></span>
-			<span class="title">NEW USAGE:</span>
-			<span class="info-new-usage"></span>
-			<span class="title">SAVINGS:</span>
-			<span class="info-savings" style="color:#E74904!important"></span>
-			<span class="title">SAVINGS IN %:</span>
-			<span class="info-savings-pct" style="color:#E74904!important"></span>
-		</div>
-	</div>
-    </script>
-
-
-
-        <div id="pack-calc-content">
-
-		</div>
+        <div>
+      <div class="calc">
+        <div class="box calc-left">
+          <div class="calc-container">
+            <h2>Calculate my savings
+              <span>Please fill in all fields to make the calculation.</span>
+            </h2>
+            <form id="pack-calc-form" novalidate="novalidate">
+              <!-- Product type -->
+              <div class="line zebra">
+                <label class="field-name">BEVERAGE TYPE</label> 
+                <div class="input" id="productTypeCnt" data-error-msg="Product type is required">
+                  <div style="display:inline-block;">
+                    <div class="iradio_flat-orange" style="position: relative;">
+                      <input type="radio" name="productCategory" id="water" value="Water" style="position: absolute; opacity: 0;">
+                      <ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);"></ins>
+                    </div>
+                    <label for="water" data-tip="Do you produce water or carbonated soft drinks?" class="help-tip"> Water </label>
+                  </div>
+                  <div style="display:inline-block;">
+                    <div class="iradio_flat-orange" style="position: relative;">
+                      <input type="radio" name="productCategory" id="csd" value="CSD" style="position: absolute; opacity: 0;">
+                      <ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);"></ins>
+                    </div>
+                    <label for="csd" data-tip="Do you produce water or carbonated soft drinks?" class="help-tip"> Carbonated Soft Drinks (CSD) </label>
+                  </div>
+                </div>
+              </div>
+              <!-- Current bottle neck format -->
+              <div class="line zebra">
+                <label class="field-name">CURRENT BOTTLE NECK FORMAT</label>
+                <div class="input" id="bottleNeckFormatCnt" data-error-msg="Current bottle neck format is required">
+                  <div class="selectricWrapper selectric-help-tip help-tip">
+                    <div class="selectricHideSelect">
+                      <select name="bottleNeckFormat" data-tip="Does your bottle have a standard neck or a short neck? The international standard neck for water is 30/25 (30 mm thread diameter and 25 mm inner diameter), and 29/25 for a short neck. For CSD, a standard neck has a PCO of 1810 and PCO 1881 for a short neck (which is lighter mainly because it is shorter in height)."
+                      class="help-tip">
+                        <option value="">Choose your format</option>
+                        <option class="option-neck-format" data-water="Standard neck for water (30/25 or larger)" data-csd="Standard neck for CSD (PCO 1810)" value="StandardNeck">Standard neck for water (30/25 or larger)</option>
+                        <option class="option-neck-format" data-water="Short neck for water (29/25) " data-csd="Short neck for CSD (PCO 1881)" value="ShortNeck">Short neck for water (29/25) </option>
+                      </select>
+                    </div>
+                    <div class="selectric">
+                      <p class="label">Choose your format</p><b class="button">▾</b></div>
+                    <div class="selectricItems" tabindex="-1">
+                      <ul>
+                        <li class="selected">Choose your format</li>
+                        <li class="">Standard neck for water (30/25 or larger)</li>
+                        <li class="last">Short neck for water (29/25) </li>
+                      </ul>
+                    </div>
+                    <input class="selectricInput">
+                  </div>
+                </div>
+              </div>
+              <!-- PET COST -->
+              <div class="line zebra">
+                <label class="field-name">PET COSTS PER TONNE FOR BOTTLE (EUROS)</label>
+                <div class="input" id="petCostPerTonForBottleCnt" data-error-msg="Use only numbers in the input field, no commas and alike">
+                  <input type="text" autocomplete="off" name="petCostPerTonForBottle" placeholder="Eg. 1500" data-tip="What are your current PET costs per tonne for the bottle? If you don't know, use the average cost: 1,500 euros" value="" class="help-tip"> </div>
+              </div>
+              <!-- HDPE COST -->
+              <div class="line zebra">
+                <label class="field-name">HDPE COSTS PER TONNE FOR CAP (EUROS)</label>
+                <div class="input" id="hdpeCostPerTonForCapCnt" data-error-msg="Use only numbers in the input field, no commas and alike">
+                  <input type="text" autocomplete="off" name="hdpeCostPerTonForCap" placeholder="Eg. 1100" data-tip="What are your current PET costs per tonne for the cap? If you don't know, use the average cost: 1,100 euros" value="" class="help-tip"> </div>
+              </div>
+              <!-- Annual production hours -->
+              <div class="line zebra">
+                <label class="field-name">ANNUAL PRODUCTION HOURS
+                  <br> (RUNNING HOURS PER YEAR)</label>
+                <div class="input" id="annualProductionHoursCnt" data-error-msg="Use only numbers in the input field, no commas and alike">
+                  <input type="text" autocomplete="off" name="annualProductionHours" placeholder="Eg. 4000" data-tip="Approximately how many hours of running production do you have a year? If you don't know, use an average amount: 4,000 hours" value="" class="help-tip"> </div>
+              </div>
+              <!-- Blower speed -->
+              <div class="line zebra">
+                <label class="field-name">BLOWER SPEED
+                  <br> (BOTTLES PER HOUR)</label>
+                <div class="input" id="blowerSpeedCnt" data-error-msg="Use only numbers in the input field, no commas and alike">
+                  <input type="text" autocomplete="off" name="blowerSpeed" placeholder="Eg. 36000" data-tip="How many bottles does your blower produce an hour? If you don't know, use an average amount: 36,000 bottles" value="" class="help-tip"> </div>
+              </div>
+              <!-- Bottle size -->
+              <div class="line zebra">
+                <label class="field-name">BOTTLE SIZE (LITRES)</label>
+                <div class="input" id="bottleSizeCnt" data-error-msg="Bottle size is required">
+                  <div class="selectricWrapper selectric-help-tip help-tip">
+                    <div class="selectricHideSelect">
+                      <select name="bottleSize" data-tip="What size is the bottle being produced? Choose one of the two options." class="help-tip">
+                        <option value="">Choose size</option>
+                        <option value="SingleServe"> Single serve (0.5 litre) </option>
+                        <option value="MultiServe"> Multi serve (2 litres) </option>
+                      </select>
+                    </div>
+                    <div class="selectric">
+                      <p class="label">Choose size</p><b class="button">▾</b></div>
+                    <div class="selectricItems" tabindex="-1">
+                      <ul>
+                        <li class="selected">Choose size</li>
+                        <li class=""> Single serve (0.5 litre) </li>
+                        <li class="last"> Multi serve (2 litres) </li>
+                      </ul>
+                    </div>
+                    <input class="selectricInput">
+                  </div>
+                </div>
+              </div>
+              <!-- Blower equipment -->
+              <div class="line zebra">
+                <label class="field-name">BLOWER EQUIPMENT TYPE</label>
+                <div class="input" id="blowerEquipmentTypeCnt" data-error-msg="Blower equipment type is required">
+                  <div class="selectricWrapper selectric-help-tip help-tip">
+                    <div class="selectricHideSelect">
+                      <select name="blowerEquipmentType" data-tip="Which type of blower are you using? Choose one of the four options. If you do not have a Sidel blower, choose “Other blower”. Figures for other blowers are based on Sidel Universal figures." class="help-tip">
+                        <option value="">Choose equipment type</option>
+                        <option value="SidelMatrix"> Sidel Matrix™ </option>
+                        <option value="SidelUniversal"> Sidel Universal </option>
+                        <option value="SidelSeries"> Sidel Series 2 </option>
+                        <option value="OtherBlower"> Other blower </option>
+                      </select>
+                    </div>
+                    <div class="selectric">
+                      <p class="label">Choose equipment type</p><b class="button">▾</b></div>
+                    <div class="selectricItems" tabindex="-1">
+                      <ul>
+                        <li class="selected">Choose equipment type</li>
+                        <li class=""> Sidel Matrix™ </li>
+                        <li class=""> Sidel Universal </li>
+                        <li class=""> Sidel Series 2 </li>
+                        <li class="last"> Other blower </li>
+                      </ul>
+                    </div>
+                    <input class="selectricInput">
+                  </div>
+                </div>
+              </div>
+              <div class="line submit-button">
+                <div class="input">
+                  <input class="textshadow" id="pack-calc-submit" type="submit" value="CALCULATE SAVINGS">
+                  <input type="hidden" name="const_Water_PetGramsSavedOnNeck" value="1.33">
+                  <input type="hidden" name="const_CSD_PetGramsSavedOnNeck" value="1.19">
+                  <input type="hidden" name="const_Water_HDPEGramsSavedOnCap" value="0.54">
+                  <input type="hidden" name="const_CSD_HDPEGramsSavedOnCap" value="0.45">
+                  <input type="hidden" name="const_Water_SingleServe_PETGramsSavedOnBottle" value="1">
+                  <input type="hidden" name="const_CSD_SingleServe_PETGramsSavedOnBottle" value="1">
+                  <input type="hidden" name="const_Water_MultiServe_PETGramsSavedOnBottle" value="2">
+                  <input type="hidden" name="const_CSD_MultiServe_PETGramsSavedOnBottle" value="1.8">
+                  <input type="hidden" name="const_Water_SingleServe_SidelSeries_EnergySaving" value="0.000337777777777778">
+                  <input type="hidden" name="const_CSD_SingleServe_SidelSeries_EnergySaving" value="0.000335555555555556">
+                  <input type="hidden" name="const_Water_SingleServe_SidelUniversal_EnergySaving" value="0.0000377777777777778">
+                  <input type="hidden" name="const_CSD_SingleServe_SidelUniversal_EnergySaving" value="0.0000355555555555556">
+                  <input type="hidden" name="const_Water_SingleServe_SidelMatrix_EnergySaving" value="0.0000711111111111111">
+                  <input type="hidden" name="const_CSD_SingleServe_SidelMatrix_EnergySaving" value="0.0000688888888888889">
+                  <input type="hidden" name="const_Water_MultiServe_SidelSeries_EnergySaving" value="0.000395555555555556">
+                  <input type="hidden" name="const_CSD_MultiServe_SidelSeries_EnergySaving" value="0.000391111111111111">
+                  <input type="hidden" name="const_Water_MultiServe_SidelUniversal_EnergySaving" value="0.000266666666666667">
+                  <input type="hidden" name="const_CSD_MultiServe_SidelUniversal_EnergySaving" value="0.000264444444444444">
+                  <input type="hidden" name="const_Water_MultiServe_SidelMatrix_EnergySaving" value="0.000164444444444444">
+                  <input type="hidden" name="const_CSD_MultiServe_SidelMatrix_EnergySaving" value="0.000162222222222222"> </div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <aside class="box calc-right">
+          <h3>Complete this form and click CALCULATE SAVINGS to see how much you could save with a Sidel StarLite base and a shorter neck.</h3>
+          <p class="helper-note"> Click or mouse over a field to reveal tips and supporting info. </p>
+        </aside>
+        <div id="data-tip" data-content="TOOLTIP:" style="display: none; top: 361px; left: 620.5px;">What are your current PET costs per tonne for the cap? If you don't know, use the average cost: 1,100 euros</div>
+      </div>
+      </div>
     </div>
     <input id="mailbodyText" type="hidden" value="Dear Sidel packaging expert,
 
@@ -1056,7 +378,7 @@ detailed consultation today.</p>
 
         <li>
             <a id="btn-share-mail" class="addthis_button_email" href="#" style="font-size: 11px;font-family: Arial,sans-serif;line-height: 16px;color: #e54c1b;">
-                <span style="line-height: 16px;vertical-align: middle;margin: 0px;padding: 0px;background: url(/images/icon-share-mail.png) right center no-repeat;padding-right: 24px;margin-left: 15px;">
+                <span style="line-height: 16px;vertical-align: middle;margin: 0px;padding: 0px;background: url(images/icon-share-mail.png) right center no-repeat;padding-right: 24px;margin-left: 15px;">
                     Mail
                 </span>
             </a>
@@ -1064,7 +386,7 @@ detailed consultation today.</p>
 
         <li>
             <a id="btn-share-print" class="addthis_button_print" href="#" style="font-size: 11px;font-family: Arial,sans-serif;line-height: 16px;color: #e54c1b;">
-                <span style="line-height: 16px;vertical-align: middle;margin: 0px;padding: 0px;background: url(/images/icon-share-print.png) right center no-repeat;padding-right: 24px;margin-left: 15px;">
+                <span style="line-height: 16px;vertical-align: middle;margin: 0px;padding: 0px;background: url(images/icon-share-print.png) right center no-repeat;padding-right: 24px;margin-left: 15px;">
                     Print
                 </span>
             </a>
@@ -1110,24 +432,7 @@ detailed consultation today.</p>
 
         <!-- Right Social Icons -->
 
-    <aside id="widget-side-links">
-            <ul class="site-links">
-                        <li><a href="http://www.sidel.com/about-sidel/contact/newsletter-sign-up"  class="newsletter-icon" title="Newsletter sign up">
-                            <img src="/media/4845341/email-icon.png" width="28" height="28" alt="http://www.sidel.com/about-sidel/contact/newsletter-sign-up"/>
-                        </a></li>
-
-                    <li><a href="http://blog.sidel.com/" target="_blank"><img src="/media/3764476/icon-footer-link-sidel.png" width="28" height="28" title="Go to the Sidel Blog" class="hastip" alt="" /></a></li>
-                    <li><a href="http://blog.knowledgeshare.com" target="_blank"><img src="/media/3764481/icon-footer-link-yellow-arrow.png" width="28" height="28" title="Visit the KNOWLEDGEshare blog" class="hastip" alt="" /></a></li>
-            </ul>
-
-            <ul class="social-links">
-                    <li><a href="https://www.facebook.com/SidelInternational" target="_blank"><img src="/media/3764786/icon-footer-social-facebook.png" width="28" height="28" alt="https://www.facebook.com/SidelInternational" /></a></li>
-                    <li><a href="http://www.linkedin.com/company/sidel" target="_blank"><img src="/media/3764791/icon-footer-social-linkedin.png" width="28" height="28" alt="http://www.linkedin.com/company/sidel" /></a></li>
-                    <li><a href="https://twitter.com/Sidel_Intl" target="_blank"><img src="/media/3764796/icon-footer-social-twitter.png" width="28" height="28" alt="https://twitter.com/Sidel_Intl" /></a></li>
-                    <li><a href="http://www.youtube.com/user/sidel" target="_blank"><img src="/media/3764801/icon-footer-social-youtube.png" width="28" height="28" alt="http://www.youtube.com/user/sidel" /></a></li>
-
-            </ul>
-    </aside>
+    @@include('../components/widget-sidelinks.html')
         <!-- Category links -->
 
 
@@ -1141,25 +446,6 @@ detailed consultation today.</p>
         <!-- Bottom Widgets -->
         <div class="article-bottom-widgets">
             <div class="bottom-container">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
             </div>
@@ -1176,135 +462,11 @@ detailed consultation today.</p>
 
 
 
-
-
       <!-- End content-->
 
 
       <!-- Start footer -->
-
-
-
-
-
-    <footer class="footer with-nl" id="main-footer">
-        <div class="highlights">
-            <ul class="page-width">
-                    <li>
-                    	<a href="http://www.sidel.com/equipment" class="col-orange">
-                            <figure class="highlight-image">
-                                <img class="lazy" data-src="/media/3764644/img-footer-highlights-item-1.png" width="197" height="156" alt="Portfolio" />
-                            </figure>
-                            <span>Portfolio</span>
-                        </a>
-                    </li>
-                    <li>
-                    	<a href="http://www.sidel.com/about-sidel/global-references" class="col-orange">
-                            <figure class="highlight-image">
-                                <img class="lazy" data-src="/media/3764649/img-footer-highlights-item-2.png" width="197" height="156" alt="References" />
-                            </figure>
-                            <span>References</span>
-                        </a>
-                    </li>
-                    <li>
-                    	<a href="http://www.sidel.com/about-sidel/media/inline-magazine" class="col-orange">
-                            <figure class="highlight-image">
-                                <img class="lazy" data-src="/media/4784344/img-footer-highlights-il7_2.png" width="197" height="156" alt="Magazine" />
-                            </figure>
-                            <span>Magazine</span>
-                        </a>
-                    </li>
-                    <li>
-                    	<a href="http://www.sidel.com/about-sidel/media/sidel-tv" class="col-orange">
-                            <figure class="highlight-image">
-                                <img class="lazy" data-src="/media/3764664/img-footer-highlights-item-4.png" width="197" height="156" alt="Videos" />
-                            </figure>
-                            <span>Videos</span>
-                        </a>
-                    </li>
-                <li class="ghost-last"></li>
-            </ul>
-        </div>
-        <div class="colophon">
-            <ul class="page-width">
-                <li class="footer-about">
-                    <h2>
-                            <a href="http://www.sidel.com/about-sidel" >
-                                About Sidel
-                            </a>
-
-                    </h2>
-                    <p>Sidel is the leading global provider of PET solutions for liquid packaging. We are committed to being an innovative, responsive and reliable partner, providing sustainable solutions for the beverage industry.</p>
-                </li>
-
-                    <li class="nl-cntr">
-                         <div class="nl-box">
-                            <div class="nl-header">
-                                <h2>
-                                    STAY UPDATED WITH OUR LATEST NEWS
-                                </h2>
-                            </div>
-                            <div class="nl-text">
-                                <div class="text">
-                                    Get our newsletter with the latest industry knowledge directly in your mailbox
-                                </div>
-                                <div class="mail-icon">
-                                    <img src="/images/email-icon.png" width="33" height="22" alt="mail"/>
-                                </div>
-                            </div>
-                            <div class="nl-orng-txt">
-                                    <a class="newsletter-signup-now" href="http://www.sidel.com/about-sidel/contact/newsletter-sign-up" >SIGN UP NOW<span class="link-icon"></span></a>
-                            </div>
-                        </div>
-                    </li>
-
-                <li class="footer-logo">
-                    <a href="/"><img src="/images/logo-footer.png" alt="logo"/></a>
-                </li>
-            </ul>
-        </div>
-        <div class="social">
-            <ul class="page-width">
-                <li class="footer-title" style="padding-left:0px;">Connect with us</li>
-
-                        <li><a href="http://www.sidel.com/about-sidel/contact/newsletter-sign-up"  class="newsletter-icon" title="Newsletter sign up">
-                                <img src="/media/4845341/email-icon.png" width="28" height="28" alt="newsletter" />
-                        </a></li>
-
-                    <li><a href="http://blog.sidel.com/" target="_blank"><img src="/media/3764476/icon-footer-link-sidel.png" width="28" height="28" title="Go to the Sidel Blog" class="hastip" alt="blog" /></a></li>
-                    <li><a href="http://blog.knowledgeshare.com" target="_blank"><img src="/media/3764481/icon-footer-link-yellow-arrow.png" width="28" height="28" title="Visit the KNOWLEDGEshare blog" class="hastip" alt="blog" /></a></li>
-
-                    <li><a href="https://www.facebook.com/SidelInternational" target="_blank"><img src="/media/3764786/icon-footer-social-facebook.png" width="28" height="28"  alt="social" /></a></li>
-                    <li><a href="http://www.linkedin.com/company/sidel" target="_blank"><img src="/media/3764791/icon-footer-social-linkedin.png" width="28" height="28"  alt="social" /></a></li>
-                    <li><a href="https://twitter.com/Sidel_Intl" target="_blank"><img src="/media/3764796/icon-footer-social-twitter.png" width="28" height="28"  alt="social" /></a></li>
-                    <li><a href="http://www.youtube.com/user/sidel" target="_blank"><img src="/media/3764801/icon-footer-social-youtube.png" width="28" height="28"  alt="social" /></a></li>
-
-                    <li class="footer-links-horizontal">
-                        <ul>
-                                <li>
-                                    <a href="http://www.sidel.com/about-sidel/contact">Contact</a>
-                                </li>
-                                <li>
-                                    <a href="http://www.sidel.com/legal-notice">Legal notice</a>
-                                </li>
-                                <li>
-                                    <a href="http://www.sidel.com/about-sidel/more-about-sidel/the-tetra-laval-group">The Tetra Laval group</a>
-                                </li>
-                                <li>
-                                    <a href="http://www.sidel.com/login">Login</a>
-                                </li>
-                                <li>
-                                    <a href="http://www.sidel.com/about-sidel/sitemap">Sitemap</a>
-                                </li>
-                        </ul>
-
-                    </li>
-            </ul>
-
-        </div>
-    </footer>
-
-
+      @@include('../components/page-footer.html')
       <!-- End footer -->
     </main>
 
@@ -1313,48 +475,5 @@ detailed consultation today.</p>
 
         <!-- End Main Content -->
 
-        <!-- JAVASCRIPT -->
-        <script src="/bundles/sidel-foot-all.js?v=cSiiWmBKhbA3a85YwB1qWvIWDeD3h35R8X9xU1pmR3o1"></script>
 
-
-        <!-- survey -->
-
-
-
-        <!--[if IE 7]>
-            <script type="text/javascript" src="/frontend/js/ie7.js"></script>
-        <![endif]-->
-
-        <script type="text/javascript">
-
-var _gaq = _gaq || [];
-_gaq.push(['_setAccount', 'UA-27061325-1']);
-
-_gaq.push(['_setDomainName', 'sidel.com']);
-
-_gaq.push(['_setAllowLinker', true]);
-
-_gaq.push(['_trackPageview']);
-
-(function() {
-var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-})();
-
-</script>
-
-
-
-
-        <!-- Placed at the end of the document so the pages load faster -->
-            <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=ra-501faed0662a7166" async="async"></script>
-
-            <script type="text/javascript">
-             var addthis_config = {
-                data_ga_property: 'UA-27061325-1'
-             };
-            </script>
-
-    </body>
-    </html>
+        @@include('../components/doc-bottom.html')

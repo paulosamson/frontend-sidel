@@ -1,0 +1,28 @@
+.breadcrumbs{
+	position:relative;
+	width:100%;
+	text-align:center;
+	#crumbs{
+		display:inline-block;
+		min-height:20px;
+		text-align:left;
+		li{
+			display:inline-block;
+			font-size:11px;
+			font-family:Arial,sans-serif;
+			line-height: 50px;
+			a{
+				span{
+					margin:0px 1px;
+				}
+			}
+			&:last-child{
+				a{
+					span{
+						display:none;
+					}
+				}
+			}
+		}
+	}
+}

@@ -922,32 +922,38 @@
 	.sidebar-widget-book-meeting{
 		.widget-title{
 			/*background:url(../images/icon-book-meeting.png) 20px center no-repeat;*/
-			padding-left:60px;
 			width:230px;
 			&:before{
 				content:'';
-				margin-top:20px;
+				display:inline-block;
+				vertical-align: middle;
+				margin-right: 15px;
+    		margin-left: 5px;
 				@include getsprite($icon-book-meeting);
 			}
 		}
-		.widget-body p a{
-			display:block;
-			background:#e64b00;
-			/*
-			-webkit-border-radius:3px;
-			-moz-border-radius: 3px;
-			border-radius: 3px;*/
-			text-transform:uppercase;
-			text-align:center;
-			width:auto;
-			font-family: 'DinotBold',arial,sans-serif;
+		.widget-body{
 			font-size:14px;
-			color:#fff;
-			padding:5px;
-			min-width:200px;
-			margin:15px 0px 0px 0px;
+			p{
+				a{
+					display:block;
+					background:#e64b00;
+					/*
+					-webkit-border-radius:3px;
+					-moz-border-radius: 3px;
+					border-radius: 3px;*/
+					text-transform:uppercase;
+					text-align:center;
+					width:auto;
+					font-family: 'DinotBold',arial,sans-serif;
+					font-size:14px;
+					color:#fff;
+					padding:5px;
+					min-width:200px;
+					margin:15px 0px 0px 0px;
+				}
+			}
 		}
-
 	}
 	.sidebar-widget-contact{
 		.widget-title{
@@ -992,6 +998,107 @@
 	margin:0 auto;
 	text-align:center;
 	min-height:400px;
+	>div, ul{
+		display:inline-block;
+		text-align:left;
+	  width: 950px;
+		span, li{
+			width:300px;
+			display:block;
+			vertical-align:top;
+			margin-top:0px;
+	    margin-right:21px;
+	    float:left;
+	    overflow:visible;
+			position:relative;
+			padding-bottom:5px;
+			cursor:pointer;
+			a{
+				display:block;
+				h2, p, h3{
+					font-family:/*"ArialNarrowBold", */arial,sans-serif;
+					font-size:14px;
+					text-align:left;
+					color:#7a8083;
+					text-transform:uppercase;
+				}
+				h2, h3{
+					font-size:15px;
+					font-weight:bold;
+					margin-bottom:0px;
+				}
+				p{
+					font-family:/*"ArialNarrow", "Arial Narrow", */arial,sans-serif;
+					text-transform:none;
+					margin-top:0px;
+					margin-top:1px;
+					.link-icon{
+						/*background:url(../images/icon-link.png) no-repeat center;*/
+						/*vertical-align:center;*/
+						width:13px!important;
+						height:10px!important;
+						margin-left:5px;
+						/*padding:5px 8px;*/
+						display:inline-block;
+				    position:absolute;
+				    margin-top:3px;
+						@include getsprite-image($icon-link);
+						@include getsprite-position($icon-link);
+					}
+				}
+				img.hover-effect{
+					position:absolute;
+					left:0px;
+					top:0px;
+					display:none;
+					width:300px;
+					height:140px;
+				}
+				&:hover{
+					img.hover-effect{
+						display: block;
+					}
+					&:first-child{
+						p .link-icon{
+							/*background:url(../images/icon-link-hover.png) no-repeat center;*/
+
+							@include getsprite-image($icon-link-hover);
+							@include getsprite-position($icon-link-hover);
+						}
+					}
+				}
+			}
+			.news-video{
+		    position: absolute;
+		   	top: 45px;
+				left: 125px;
+		    height:58px;
+		    width:58px;
+			}
+		}
+		.clearfix{
+			width:100%;
+			min-height:1px;
+			height:1px;
+			margin:0px;
+			padding:0px;
+			&.article-group-title {
+		    width: 942px !important;
+		    color: #7a8083;
+		    overflow: hidden;
+				height:auto;
+				margin:1em 0;
+			}
+			&.past-event-topline {
+			  display: block;
+				border-bottom: 1px dotted #ccc;
+				width: 100%;
+				height: 25px;
+				overflow: hidden;
+				margin-bottom :20px;
+			}
+		}
+	}
 }
 
 .Sektion .article-previews, .LandingPage .article-previews{
@@ -1002,114 +1109,4 @@
 .LandingPage .article-previews
 {
     min-height:0px !important;
-}
-
-.article-previews ul, .article-previews > div{
-	display:inline-block;
-	text-align:left;
-    width: 950px;
-}
-
-.article-previews ul li, .article-previews > div span{
-	width:300px;
-	display:block;
-	vertical-align:top;
-	margin-top:0px;
-    margin-right:21px;
-    float:left;
-    overflow:visible;
-	position:relative;
-	padding-bottom:5px;
-	cursor:pointer;
-}
-
-.article-previews ul li.clearfix, .article-previews > div span.clearfix{
-	width:100%;
-	min-height:1px;
-	height:1px;
-	margin:0px;
-	padding:0px;
-}
-
-.article-previews ul li a, .article-previews > div span a{
-	display:block;
-
-	/*position:relative;*/
-}
-
-.article-previews ul li a h2,.article-previews ul li a p,.article-previews ul li a h3,
-.article-previews > div span a h2,.article-previews > div span a p,.article-previews > div span a h3{
-	font-family:/*"ArialNarrowBold", */arial,sans-serif;
-	font-size:14px;
-	text-align:left;
-	color:#7a8083;
-	text-transform:uppercase;
-}
-
-.article-previews ul li a h2,.article-previews ul li a h3,
-.article-previews > div span a h2,.article-previews > div span a h3{
-	font-size:15px;
-	font-weight:bold;
-	margin-bottom:0px;
-}
-
-
-
-.article-previews ul li a p, .article-previews > div span a p{
-	font-family:/*"ArialNarrow", "Arial Narrow", */arial,sans-serif;
-	text-transform:none;
-	margin-top:0px;
-	margin-top:1px;
-}
-
-.article-previews ul li a p .link-icon, .article-previews > div span a p .link-icon{
-	/*background:url(../images/icon-link.png) no-repeat center;*/
-	/*vertical-align:center;*/
-	width:13px!important;
-	height:10px!important;
-	margin-left:5px;
-	/*padding:5px 8px;*/
-	display:inline-block;
-    position:absolute;
-    margin-top:3px;
-		@include getsprite-image($icon-link);
-		@include getsprite-position($icon-link);
-}
-
-.article-previews ul li a img.hover-effect, .article-previews > div span a img.hover-effect{
-	position:absolute;
-	left:0px;
-	top:0px;
-	display:none;
-	width:300px;
-	height:140px;
-}
-
-.article-previews ul li a:hover:first-child img.hover-effect, .article-previews > div span a:hover:first-child img.hover-effect{
-	display:block;
-}
-
-/*
-.article-previews ul li:hover a h2{
-	color:#e64b00;
-}
-*/
-
-.article-previews ul li:hover a h3, .article-previews div span:hover a h3{
-	color:#e64b00;
-}
-
-.article-previews ul li a:hover:first-child p .link-icon, .article-previews > div span a:hover:first-child p .link-icon{
-	/*background:url(../images/icon-link-hover.png) no-repeat center;*/
-
-	@include getsprite-image($icon-link-hover);
-	@include getsprite-position($icon-link-hover);
-}
-
-.article-previews ul li .news-video, .article-previews > div span .news-video{
-    position: absolute;
-   	top: 45px;
-		left: 125px;
-    height:58px;
-    width:58px;
 }

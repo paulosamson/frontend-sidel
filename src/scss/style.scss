@@ -14,3 +14,8 @@
   'components/base',
   'components/coverflow',
   'components/herobanner';
+
+.clearfix {
+  float: none;
+  clear: both;
+}

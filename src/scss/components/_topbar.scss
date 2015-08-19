@@ -1,0 +1,38 @@
+.topbar{
+	position:relative;
+	min-height:120px;
+	background:url(../images/bg-topbar.png) top left repeat-x;
+	margin:0 auto;
+	z-index: 10;
+
+	.masthead{
+		position: relative;
+		margin: 0 auto;
+
+		@import 'topbar-topnav';
+		@import 'topbar-megamenu';
+
+	}
+
+	.branding{
+		padding:0px;
+		margin:0px;
+		position:absolute;
+		width:150px;
+		height:120px;
+		left:0px;
+		top:0px;
+		a{
+			display:block;
+		}
+	}
+
+	#topbar-dropshadow{
+		position:absolute;
+		bottom:-10px;
+		left:0px;
+		height:10px;
+		width:100%;
+		background:url(../images/bg-topbar-dropshadow.png) top left repeat-x;
+	}
+}
