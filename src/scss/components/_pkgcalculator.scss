@@ -38,8 +38,14 @@
       box-sizing: border-box;
       float: left;
       h2 {
-        /*background: url("../images/img-calc-email.png") top right no-repeat;*/
-      	@include getsprite($img-calc-email);
+        /*
+      	&:before{
+          display:none;
+          content:'';
+          display:inline-block;
+          @include getsprite($img-calc-email);
+        }
+        */
       }
       h2 {
         border-bottom: 1px dotted #ccc;
@@ -468,9 +474,16 @@
         font-weight: normal;
         text-transform: uppercase;
         font-size: 13px;
-        padding-left: 25px;
+        line-height:19px;
+        height:19px;
+        padding-left: 0px;
         /*background: url("../images/icon-new-calc.png") no-repeat top left;*/
-      	@include getsprite($icon-new-calc);
+        &:before{
+          content:'';
+          margin-right: 10px;
+      	  display:inline-block;
+          @include getsprite($icon-new-calc);
+        }
       }
     }
     .bottom-links {
@@ -616,7 +629,7 @@ label.error-email
     top: 40px;
 }
 
-    label.error-email p
-    {
-        color: #e51c20 !important;
-    }
+label.error-email p
+{
+    color: #e51c20 !important;
+}

@@ -1,0 +1,146 @@
+/*-- FOOTER ---*/
+
+.footer{
+	width:100%;
+	text-align: center;
+	margin-top:10px;
+	h2, .footer-title{
+		font-family: /*'ArialNarrowBold',*/arial,sans-serif;
+		font-size:14px;
+		color:#7a8083;
+		text-transform:uppercase;
+		font-weight:bold;
+	}
+	ul{
+		/*background:rgba(0,0,0,0.2);*/
+		margin:0;
+		padding:0;
+	}
+	.highlights{
+		width:100%;
+		background:url(../images/bg-footer-highlights.png) top left repeat-x;
+		min-height:200px;
+		padding:50px 0px 40px 0px;
+		ul{
+			display:inline-block;
+			position:relative;
+			text-align:justify;
+			li{
+				display:inline-block;
+				width:200px;
+				min-height:200px;
+				position:relative;
+				text-align:center;
+				vertical-align: top;
+				&.ghost-last{
+					width:100%;
+					height:0px;
+				}
+				a{
+					.highlight-image{
+						width:200px;
+						height:160px;
+						float:left;
+						overflow:hidden;
+						padding:0px;
+						margin:0;
+						opacity:0.6;
+						-webkit-transition: opacity 0.5s; /* For Safari 3.1 to 6.0 */
+						-moz-transition: opacity 0.5s;
+						transition: opacity 0.5s;
+					}
+					&:hover .highlight-image{
+						opacity:1;
+					}
+					span{
+						font-size:20px;
+						font-family:/*"Arial Bold", */arial, sans-serif;
+						text-transform:uppercase;
+						margin-top:10px;
+						font-weight:bold;
+					}
+				}
+			}
+		}
+	}
+	.colophon{
+		width:100%;
+		min-height:100px;
+		padding:30px 0px 10px 0px;
+		background:#ececec;
+		display:inline-block;
+		color:#7a8083;
+		ul{
+			display:inline-block;
+			position:relative;
+			.footer-about{
+				text-align:left;
+				display:block;
+				width:467px;
+				float:left;
+				padding-right:20px;
+				h2{
+					margin-top:0px;
+				}
+				p{
+					font-size:12px;
+					font-family:/*"ArialNarrow",*/arial,sans-serif;
+				}
+			}
+			.footer-links{
+				text-align:left;
+				display:block;
+				width:300px;
+				float:left;
+				a{
+					font-family: /*'ArialNarrowBold',*/arial,sans-serif;
+					font-size:14px;
+					color:#7a8083;
+					text-transform:uppercase;
+					width:100%;
+					display: inline-block;
+					margin-top:0px;
+					margin-bottom:5px;
+					&:hover{
+						color:#e64b00;
+					}
+				}
+			}
+			.footer-logo{
+				margin-top: 3px;
+				position: absolute;
+				right: 0px;
+			}
+		}
+	}
+	.nl-cntr{
+		p{
+			font-size:12px;
+			font-family:/*"ArialNarrow",*/arial,sans-serif;
+		}
+	}
+	.social{
+		width:100%;
+		background:#ececec url(../images/bg-footer-social.png) top left repeat-x;
+		min-height:70px;
+		ul{
+			padding:20px 0px;
+			display:inline-block;
+			li{
+				float:left;
+				padding:0px 5px;
+				height:28px;
+				vertical-align: middle;
+				line-height: 28px;
+				h2{
+					margin:0px;
+					padding:0px;
+				}
+			}
+		}
+	}
+	.footer-title{
+		margin:0px;
+		padding:0px;
+	}
+}

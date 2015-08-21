@@ -1,10 +1,18 @@
 .topbar{
 	position:relative;
 	min-height:120px;
-	background:url(../images/bg-topbar.png) top left repeat-x;
+	/*background:url(../images/bg-topbar.png) top left repeat-x;*/
 	margin:0 auto;
 	z-index: 10;
 
+	&:before{
+		content:'';
+		position:absolute;
+		width:100%;
+		height:31px;
+		background-color:#ececec;
+		z-index:0;
+	}
 	.masthead{
 		position: relative;
 		margin: 0 auto;

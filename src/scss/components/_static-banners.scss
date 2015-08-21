@@ -1,0 +1,96 @@
+
+/*==== STATIC BANNER ====*/
+
+.static-banner{
+	position:relative;
+	width:100%;
+	min-height:400px;
+	margin:0 auto;
+	padding-bottom: 15px;
+	.banner-wrapper{
+		width:100%;
+		height:500px;
+		max-height:608px;
+		.item{
+			position:relative;
+			height:500px;
+			img{
+				&.image{
+					height:100%;
+					width:auto;
+					margin:0 auto;
+				}
+			}
+			>img{
+				visibility:hidden;
+			}
+			.texts{
+				position:absolute;
+				top:50px;
+				left:50%;
+				width:950px;
+				margin-left:-475px;
+				.text-body{
+					max-width:300px;
+					font-size:16px;
+					margin-top: 65px;
+				}
+				.image{
+					width:627px;
+					height:397px;
+					position:absolute;
+					top:0px;
+					right:0px;
+					figure{
+						margin:0px;
+						padding:0px;
+						position:absolute;
+						top:0px;
+						right:0px;
+						z-index:2;
+						background:#fff;
+						width: 627px;
+						height: 397px;
+					}
+				}
+				.text-head{
+					font-family: 'DinotBold',arial,sans-serif;
+					font-size:36px;
+					text-transform:uppercase;
+					max-width:400px;
+					line-height: 34px;
+					margin: 7px 0px;
+					font-weight:normal;
+				  width:300px;
+				}
+				.text-top{
+					font-family: 'DinotLight',arial,sans-serif;
+					font-size:28px;
+					text-transform:uppercase;
+					max-width:400px;
+					line-height: 32px;
+					margin-top: 64px;
+					margin-bottom: 0px;
+				}
+				.text-more{
+					font-family: 'DinotBold',arial,sans-serif;
+					font-size:14px;
+					text-transform:uppercase;
+					max-width:400px;
+					line-height: 14px;
+					color:#e64b00;
+					img{
+						width:auto;
+						height:auto;
+						margin:0 0 0 10px;
+						display: inline-block;
+					}
+				}
+				.text-image{
+					max-width:300px;
+					margin-top: 0px;
+				}
+			}
+		}
+	}
+}
