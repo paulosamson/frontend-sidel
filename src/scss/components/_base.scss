@@ -740,89 +740,6 @@ div[data-disable-lighbox="1"] img,.article-image img
 
 
 
-.breadcrumb {
-    /*margin-top: 22px;
-    list-style: none;
-    float: left;
-    margin-left: 35px;
-    margin-right: 35px;
-    position: relative;*/
-
-    position: relative;
-    text-align: left;
-    top: 15px;
-    min-height: 25px;
-}
-.breadcrumb li {
-    color: #71777a;
-    float: left;
-    font: normal 11px Arial, Verdana, sans-serif;
-    margin: 0 3px;
-}
-.breadcrumb li a {
-    color: #71777a;
-    font: normal 11px Arial, Verdana, sans-serif;
-}
-#RU .breadcrumb li a, #FR .breadcrumb li a {
-    font: normal 12px "Trebuchet MS", Helvetica, sans-serif;
-}
-.breadcrumb li.active a {
-    font-family: Arial, Verdana, sans-serif;
-    font-weight: bold;
-}
-#RU .breadcrumb li.active a, #FR .breadcrumb li.active a {
-    font-weight: bold;
-}
-.breadcrumb .first {
-    background-color: #999;
-    color: #fff;
-    padding: 1px 3px;
-}
-.breadcrumb .breadcrumb-separator img {
-    width: 3px;
-    height: 10px;
-    margin-left: 5px;
-}
-.breadcrumb-lvl2 {
-    width: 242px;
-    float: left;
-    list-style: none;
-    border: 1px solid #E0E0E0;
-    padding: 0;
-}
-.breadcrumb-lvl2 li {
-    display: block;
-    padding: 5px 0 5px 0;
-    margin: 0;
-}
-.breadcrumb-lvl2 li a, .active .breadcrumb-lvl2 li a {
-    padding-left: 5px;
-    display: block;
-    font: normal 11px Arial, Verdana, sans-serif;
-    text-align:left;
-}
-.breadcrumb-lvl2 li a:hover {
-    font-family: Arial, Verdana, sans-serif;
-    font-weight: bold;
-}
-#RU .breadcrumb-lvl2 li a:hover, #FR .breadcrumb-lvl2 li a:hover {
-    font-weight: bold;
-}
-.breadcrumb-lvl2 li.odd {
-    width: 100%;
-    background: #F5F5F5;
-}
-.breadcrumb-lvl2-wrapper {
-    border-bottom: 2px solid #e64b00;
-    background: #FFF;
-    float: left;
-    position: absolute;
-    width: 244px;
-    z-index: 6;
-    display: none;
-    top: 15px;
-}
-
 .news-video
 {
     position: absolute;
@@ -1313,6 +1230,11 @@ div.big-link
     padding-top:5px;
     float:left;
     text-align:right;
+		&:after{
+			content:"";
+			display:inline-block;
+			@include getsprite($email-icon);
+		}
 }
 
 .nl-cntr .nl-orng-txt a

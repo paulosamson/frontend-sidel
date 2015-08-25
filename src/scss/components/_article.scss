@@ -355,6 +355,34 @@
 			    width: 150px;
 			    line-height: 24px;
 				}
+				a{
+					&#btn-share-mail, &#btn-share-print{
+						font-size: 11px;
+						font-family: Arial,sans-serif;
+						line-height: 16px;
+						color: #e54c1b;
+						span{
+							line-height: 16px;
+							vertical-align: middle;
+							margin: 0px;
+							padding: 0px;
+							margin-left: 15px;
+						}
+						&:after{
+							content:"";
+							display:inline-block;
+							vertical-align: bottom;
+							margin-left:5px;
+							@include getsprite($icon-share-mail);
+							//background: url(images/icon-share-mail.png) right center no-repeat;
+						}
+					}
+					&#btn-share-print{
+						&:after{
+							@include getsprite($icon-share-print);
+						}
+					}
+				}
 			}
 		}
 	}
@@ -1035,18 +1063,16 @@
 					.link-icon{
 						/*background:url(../images/icon-link.png) no-repeat center;*/
 						/*vertical-align:center;*/
-						width:13px!important;
-						height:10px!important;
 						margin-left:5px;
 						/*padding:5px 8px;*/
 						display:inline-block;
 				    position:absolute;
 				    margin-top:3px;
-						@include getsprite-image($icon-link);
-						@include getsprite-position($icon-link);
+						@include getsprite($icon-link);
+						padding:0;
 					}
 				}
-				img.hover-effect{
+				img.hover-effect, span.hover-effect{
 					position:absolute;
 					left:0px;
 					top:0px;
@@ -1054,16 +1080,23 @@
 					width:300px;
 					height:140px;
 				}
+				span.hover-effect{
+					&:after{
+						content:"";
+						display:inline-block;
+						@include getsprite($hover-frontpage-news-image);
+					}
+				}
 				&:hover{
-					img.hover-effect{
+					img.hover-effect, span.hover-effect{
 						display: block;
 					}
 					&:first-child{
 						p .link-icon{
 							/*background:url(../images/icon-link-hover.png) no-repeat center;*/
 
-							@include getsprite-image($icon-link-hover);
-							@include getsprite-position($icon-link-hover);
+							@include getsprite($icon-link-hover);
+
 						}
 					}
 				}

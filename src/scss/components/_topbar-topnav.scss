@@ -22,6 +22,7 @@
     right: 0;
     top: 4px;
     border:none;
+    @include getsprite($icon-search);
   }
   ul{
     margin:0 auto;
@@ -89,6 +90,16 @@
     color: #989898;
     &:hover {
       color:#e64b00;
+    }
+    span{
+      &.icon-lock{
+        margin-left:5px;
+        &:after{
+          content:"";
+          display:inline-block;
+          @include getsprite($icon-lock);
+        }
+      }
     }
   }
 }
